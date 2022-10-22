@@ -5,70 +5,69 @@ using namespace std;
 
 int Servicio:: getCodigoServicio ()
 {
-    return CodigoServicio;
+    return _codigoServicio;
 }
 int Servicio:: getComida ()
 {
-    return Comida;
+    return _comida;
 }
 int Servicio:: getExcursiones ()
 {
-    return Excursiones;
+    return _excursiones;
 }
 float Servicio:: getPrecio ()
 {
-    return Precio;
+    return _precio;
 }
 bool Servicio:: getActivo ()
 {
-    return Activo;
+    return _activo;
 }
 void Servicio:: setCodigoServicio (int codigo)
 {
-    CodigoServicio=codigo;
+    _codigoServicio=codigo;
 }
 
 
 void Servicio:: setComida (int comida)
 {
-    Comida=comida;
+    _comida=comida;
 }
 void Servicio:: setExcursiones (int excursiones)
 {
-    Excursiones=excursiones;
+    _excursiones=excursiones;
 }
 void Servicio:: setPrecio (float precio)
 {
-    Precio=precio;
+    _precio=precio;
 }
 void Servicio:: setActivo (bool activo)
 {
-    Activo=activo;
+    _activo=activo;
 }
 
 void Servicio::Cargar()
 {
     cout << "Ingrese el Codigo de Servicio"<<endl;
-    cin>> CodigoServicio;
+    cin>> _codigoServicio;
     cout<<endl;
     cout << "Ingrese el Codigo de Comida"<<endl;
-    cin>>Comida;
+    cin>> _comida;
     cout<<endl;
     cout << "Ingrese el Codigo de Excursiones"<<endl;
-    cin>>Excursiones;
+    cin>> _excursiones;
     cout<<endl;
     cout << "Ingrese el Precio"<<endl;
-    cout<<endl;
-    cin>>Precio;
+    cin>> _precio;
     cout<<endl;
 
-    Activo=true;
+    _activo=true;
 }
 
 void Servicio::Mostrar ()
 {
-    cout<< "El Codigo de Servicio es: "<<CodigoServicio<<endl;
-    cout<< "El codigo de Comida es: "<<Comida<<endl;
-    cout<< "El codigo de Excursiones es: "<<Excursiones<<endl;
-    cout<< "El Precio es: "<<Precio<<endl;
+    cout<< "El Codigo de Servicio es: "<< _codigoServicio<<endl;
+    cout<< "El codigo de Comida es: "<< _comida<<endl;
+    cout<< "El codigo de Excursiones es: "<< _excursiones<<endl;
+    cout<< "El Precio es: "<< _precio<<endl;
 }

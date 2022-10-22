@@ -6,61 +6,61 @@ using namespace std;
 
 int Cliente::getDni ()
 {
-    return Dni;
+    return _dni;
 }
 string Cliente::getNombre ()
 {
-    return Nombre;
+    return _nombre;
 }
 
 string Cliente::getApellido ()
 {
-    return Apellido;
+    return _apellido;
 }
-
 
 int Cliente::getEdad ()
 {
-    return Edad;
+    return _edad;
 }
 string Cliente::getMail ()
 {
-    return Mail;
+    return _mail;
 }
 Fecha Cliente::getFechaNacimiento ()
 {
-    return FechaNacimiento;
+    return _fechaNacimiento;
 }
 
 bool Cliente::getActivo ()
 {
-    return Activo;
+    return _activo;
 }
 void Cliente::setDni (int dni)
 {
-    Dni=dni;
+    _dni=dni;
 }
-void Cliente::setNombre (string)
+void Cliente::setNombre (string nombre)
 {
-
+    strcpy(_nombre, nombre.c_str());
 }
-void Cliente::setApellido (string)
+void Cliente::setApellido (string apellido)
 {
-
+    strcpy(_apellido, apellido.c_str());
 }
 void Cliente::setEdad (int edad)
 {
-    Edad=edad;
+    _edad=edad;
 }
-void Cliente::setMail (string)
+void Cliente::setMail (string mail)
 {
-
+    strcpy(_mail, mail.c_str());
 }
+
 void Cliente::setFechaNacimiento (Fecha f)
 {
-    FechaNacimiento=f;
+    _fechaNacimiento=f;
 }
 void Cliente::setActivo (bool activo)
 {
-    Activo=activo;
+    _activo=activo;
 }

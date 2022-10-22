@@ -35,10 +35,20 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Cliente.h" />
+		<Unit filename="include/ClienteArchivo.h" />
 		<Unit filename="include/Fecha.h" />
+		<Unit filename="include/Habitacion.h" />
+		<Unit filename="include/HabitacionArchivo.h" />
+		<Unit filename="include/Servicio.h" />
+		<Unit filename="include/ServicioArchivo.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />
+		<Unit filename="src/ClienteArchivo.cpp" />
 		<Unit filename="src/Fecha.cpp" />
+		<Unit filename="src/Habitacion.cpp" />
+		<Unit filename="src/HabitacionArchivo.cpp" />
+		<Unit filename="src/Servicio.cpp" />
+		<Unit filename="src/ServicioArchivo.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

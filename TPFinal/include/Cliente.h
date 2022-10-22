@@ -27,13 +27,13 @@ public:
 
 
 private:
-    int Dni;
-    char Nombre [50];
-    char Apellido [50];
-    int Edad;
-    char Mail[50];
-    Fecha FechaNacimiento;
-    bool Activo;
+    int _dni;
+    char _nombre [50];
+    char _apellido [50];
+    int _edad;
+    char _mail[50];
+    Fecha _fechaNacimiento;
+    bool _activo;
 
 };
 

@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1666416282 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\main.cpp
+	"Cliente.h"
+	"Servicio.h"
+	<iostream>
+
+1666414808 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\fecha.cpp
+	"fecha.h"
+	<ctime>
+
+1666414808 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\fecha.h
+	<string>
+
+1666467793 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\servicio.cpp
+	"Servicio.h"
+	<iostream>
+
+1666467793 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicio.h
+
+1666469197 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
+	<cstring>
+	<iostream>
+	"Cliente.h"
+
+1666467638 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\cliente.h
+	"Fecha.h"
+	<cstring>
+	<iostream>
+
+1666417386 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\cliente.h
+	"Fecha.h"
+	<cstring>
+	<iostream>
+
+1666414808 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\fecha.h
+	<string>
+
+1666417919 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\servicio.h
+
+1666469564 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\habitacion.cpp
+	<iostream>
+	"Habitacion.h"
+
+1666469557 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\habitacion.h
+	<cstring>
+	<iostream>
+	"Fecha.h"
+
+1666470214 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
+	"ClienteArchivo.h"
+
+1666470197 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
+	"Cliente.h"
+
+1666470709 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\habitacionarchivo.cpp
+	"HabitacionArchivo.h"
+
+1666470621 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\habitacionarchivo.h
+	"Habitacion.h"
+

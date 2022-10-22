@@ -5,11 +5,11 @@
 class Servicio
 {
 private:
-        int CodigoServicio;
-        int Comida;
-        int Excursiones;
-        float Precio;
-        bool Activo;
+        int _codigoServicio;
+        int _comida;
+        int _excursiones;
+        float _precio;
+        bool _activo;
 public:
         int getCodigoServicio ();
         int getComida ();
