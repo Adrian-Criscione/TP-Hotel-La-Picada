@@ -15,7 +15,9 @@
 	"Servicio.h"
 	<iostream>
 
-1666467793 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicio.h
+1666472915 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicio.h
+	<cstring>
+	<iostream>
 
 1666469197 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
 	<cstring>

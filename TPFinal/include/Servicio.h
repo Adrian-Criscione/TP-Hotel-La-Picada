@@ -1,6 +1,9 @@
 #ifndef SERVICIO_H_INCLUDED
 #define SERVICIO_H_INCLUDED
+#include <cstring>
+#include <iostream>
 
+using namespace std;
 
 class Servicio
 {
