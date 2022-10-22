@@ -9,40 +9,20 @@ class Habitacion
 {
 private:
     int _numero;
-    int _dniCliente;
-    int _legajoEmpleado;
-    int _codigoServicio;
-    char _medioDePago [50];
-    Fecha _fechaReserva;
-    char _canalDeReserva [50];
     float _precio;
-    bool _abonado;
-    bool _activo;
+    bool _disponible;
 
 public:
     int getNumero();
-    int getDniCliente ();
-    int getLegajoEmpleado ();
-    int getCodigoServicio ();
-    string getMedioDePago ();
-    Fecha getFechaReserva ();
-    string getCanalDeReserva ();
     float getPrecio ();
-    bool getAbonado ();
-    bool getActivo ();
+    bool getDisponible ();
     void setNumero (int);
     void setDniCliente (int);
-    void setLegajoEmpleado (int);
-    void setCodigoServicio (int);
-    void setMedioDePago (string);
-    void setFechaReserva (Fecha);
-    void setCanalDeReserva (string);
     void setPrecio (float);
-    void setAbonado (bool);
-    void setActivo (bool);
+    void setDisponible (bool);
 
 
-    };
+};
 
 
 #endif // HABITACION_H_INCLUDED
