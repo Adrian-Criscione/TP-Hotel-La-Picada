@@ -107,7 +107,8 @@
 	"Servicio.h"
 	<iostream>
 
-1666479273 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\reserva.cpp
+1666570516 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\reserva.cpp
+	<iostream>
 	"Reserva.h"
 
 1666478696 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\reserva.h
@@ -120,4 +121,8 @@
 
 1666474786 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\servicioarchivo.h
 	"Servicio.h"
+
+1666479404 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\habitacion.cpp
+	<iostream>
+	"Habitacion.h"
 
