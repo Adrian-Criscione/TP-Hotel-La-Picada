@@ -1,11 +1,12 @@
 #include "Cliente.h"
 #include "Servicio.h"
+#include "Menu.h"
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+Menu();
     return 0;
 }

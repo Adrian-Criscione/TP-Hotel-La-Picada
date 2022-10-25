@@ -64,3 +64,12 @@ void Cliente::setActivo (bool activo)
 {
     _activo=activo;
 }
+
+void Cliente::Cargar ()
+{
+    cout<< "Ingrese numero de DNI del cliente: "<<endl;
+    cin>> _dni;
+    cout<< "Ingrese el Nombre: "<<endl;
+    cin>> _nombre;
+
+}
