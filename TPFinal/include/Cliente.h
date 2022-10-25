@@ -23,7 +23,7 @@ public:
     void setMail (string);
     void setFechaNacimiento (Fecha);
     void setActivo (bool);
-    void Cargar();
+    void Cargar(int dni);
     void Mostrar();
 
 

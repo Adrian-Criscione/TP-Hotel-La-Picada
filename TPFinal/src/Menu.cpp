@@ -7,6 +7,11 @@
 using namespace std;
 using namespace rlutil;
 
+
+////////////////////////////FIXME NO SIEMPRE FUNCIONA LA OPCION DE SALIR DE MENU
+
+
+
 void Menu()
 {
     bool salir=false; ///VARIABLE PARA EL while
@@ -34,8 +39,8 @@ void Menu()
 
         case '2':
         {
-        cls ();
-        MenuCliente();
+            cls ();
+            MenuCliente();
 
         }
         break;
@@ -81,7 +86,7 @@ void Menu()
             break;
             case 'n':
             {
-               Menu();
+                Menu();
             }
             break;
             case 'N':
@@ -134,9 +139,9 @@ void mostrar_menu()
     gotoxy(50,13);
     cout<<"3 - HABITACIONES"<<endl;
     gotoxy(50,14);
-     cout<<"4 - SERVICIOS"<<endl;
+    cout<<"4 - SERVICIOS"<<endl;
     gotoxy(50,15);
-     cout<<"5 - INFORMES"<<endl;
+    cout<<"5 - INFORMES"<<endl;
     gotoxy(50,16);
     cout<<"---------------------"<<endl;
     gotoxy(50,17);
@@ -158,7 +163,7 @@ void mostrar_menucliente()
     gotoxy(50,13);
     cout<<"3 - CONSULTAS POR DNI"<<endl;
     gotoxy(50,14);
-     cout<<"4 - ELIMINAR CLIENTE"<<endl;
+    cout<<"4 - ELIMINAR CLIENTE"<<endl;
     gotoxy(50,15);
     cout<<"---------------------"<<endl;
     gotoxy(50,16);
@@ -168,6 +173,7 @@ void mostrar_menucliente()
 void MenuCliente ()
 {
     Cliente cl;
+    ClienteArchivo clarchivo;
 
     bool salir=false;
     char op;
@@ -189,14 +195,51 @@ void MenuCliente ()
         case '1':
         {
             cls ();
-            cl.Cargar();
+            ///CARGAR REGISTRO
+            ///VALIDAR REGISTRO
+            ///GRABAR REGISTRO SI VALIDO
+
+            int dni, pos;
+            cout<<"CARGUE NUMERO DE DNI DEL CLIENTE: ";
+            cin>>dni;
+            pos=clarchivo.buscar(dni);
+            if(pos>=0)
+            {
+                cout<<"EL NUMERO DE DNI DE CLIENTE YA SE ENCUENTRA EN NUESTROS REGISTROS"<<endl;
+                system("pause");
+            }
+            else
+            {
+                cl.Cargar(dni);
+                cl.Mostrar();
+                system("pause");
+                cout<< "LOS DATOS SON CORRECTOS? ";
+                cin.get();
+
+                clarchivo.guardar(cl);
+               cls();
+            }
         }
         break;
 
         case '2':
         {
+            cls();
+            int dni,pos;
+            cout<< "INGRESE EL NUMERO DE CLIENTE A MODIFICAR: ";
+            cin>>dni;
+             pos=clarchivo.buscar(dni);
+            if(pos<0)
+            {
+                cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
+                system("pause");
+            }
+            else{
 
-        }
+            clarchivo.ModificarArchivo(clarchivo.buscar(dni));
+            system("pause");
+        }}
+
         break;
 
         case '3':
@@ -240,7 +283,7 @@ void MenuCliente ()
             break;
             case 'n':
             {
-               MenuCliente();
+                MenuCliente();
             }
             break;
             case 'N':
