@@ -8,6 +8,7 @@ using namespace std;
 class Reserva
 {
 private:
+    int _numeroreserva;
     int _dniCliente;
     int _legajoEmpleado;
     int _codigoServicio;
@@ -16,8 +17,10 @@ private:
     char _canalDeReserva [50];
     float _monto;
     bool _abonado;
+    bool _activo;
 
 public:
+    int getNumeroReserva ();
     int getDniCliente ();
     int getLegajoEmpleado ();
     int getCodigoServicio ();
@@ -26,6 +29,8 @@ public:
     string getCanalDeReserva ();
     float getMonto();
     bool getAbonado ();
+    bool getActivo ();
+    void setNumeroReserva (int numeroreserva);
     void setDniCliente (int dniCliente);
     void setLegajoEmpleado (int legajoEmpleado);
     void setCodigoServicio (int codigoServicio);
@@ -34,6 +39,7 @@ public:
     void setCanalDeReserva (string canalDeReserva);
     void setMonto (float monto);
     void setAbonado (bool abonado);
+    void setActivo (bool activo);
 };
 
 #endif // RESERVA_H

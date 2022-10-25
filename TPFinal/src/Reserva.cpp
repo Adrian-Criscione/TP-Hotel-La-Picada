@@ -1,7 +1,10 @@
 #include <iostream>
 #include "Reserva.h"
 using namespace std;
+int Reserva::getNumeroReserva(){
 
+    return _numeroreserva;
+}
 int Reserva::getDniCliente(){
 
     return _dniCliente;
@@ -41,7 +44,14 @@ bool Reserva::getAbonado(){
 
     return _abonado;
 }
+bool Reserva::getActivo(){
 
+    return _activo;
+}
+void Reserva::setNumeroReserva (int numeroreserva){
+
+    _numeroreserva=numeroreserva;
+}
 void Reserva::setDniCliente(int dni){
 
     _dniCliente=dni;
@@ -80,4 +90,8 @@ void Reserva::setMonto(float monto){
 void Reserva::setAbonado(bool abonado){
 
     _abonado = abonado;
+}
+void Reserva::setActivo(bool activo){
+
+    _activo = activo;
 }
