@@ -67,9 +67,31 @@ void Cliente::setActivo (bool activo)
 
 void Cliente::Cargar ()
 {
+    int dia, mes, anio;
     cout<< "Ingrese numero de DNI del cliente: "<<endl;
     cin>> _dni;
-    cout<< "Ingrese el Nombre: "<<endl;
+    cout<< "Ingrese Nombre: "<<endl;
     cin>> _nombre;
+    cout<<"Ingrese Apellido: "<<endl;
+    cin>>_apellido;
+    cout<<"Ingrese Edad: "<<endl;
+    cin>>_edad;
+    cout<<"Ingrese Email: "<<endl;
+    cin>>_mail;
+    cout<<"Fecha de nacimiento: Ingrese dia: "<<endl;
+    cin>>dia;
+    _fechaNacimiento.setDia(dia);
+    cout<<"Fecha de nacimiento: Ingrese mes: "<<endl;
+    cin>>mes;
+    _fechaNacimiento.setMes(mes);
+    cout<<"Fecha de nacimiento: Ingrese anio: "<<endl;
+    cin>>anio;
+    _fechaNacimiento.setAnio(anio);
 
+}
+
+void Cliente::Mostrar(){
+    cout<<_nombre<<"  "<<_apellido<<"  "<<"DNI: "<<_dni<<endl;
+    cout<<"Edad: "<<_edad<<"  "<<"Email: "<<_mail<<"  "<<endl;
+    cout<<"Activo: "<<_activo<<endl;
 }
