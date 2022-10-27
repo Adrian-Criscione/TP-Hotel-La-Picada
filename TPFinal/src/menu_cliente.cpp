@@ -97,8 +97,8 @@ void MenuCliente ()
             }
             else
             {
-              cl=ca.leer(pos);
-            cl.Mostrar();
+                cl=ca.leer(pos);
+                cl.Mostrar();
                 system("pause");
             }
 
@@ -180,9 +180,10 @@ void MenuCliente ()
 }
 void altaCliente ()
 {
+    char guardar;
     Cliente cl;
     ClienteArchivo ca;
-        cls ();
+    cls ();
     int dni, pos;
     cout<<"CARGUE NUMERO DE DNI DEL CLIENTE: ";
     cin>>dni;
@@ -196,8 +197,47 @@ void altaCliente ()
     {
         cl.Cargar(dni);
         cl.Mostrar();
-        ca.guardar(cl);
-        system("pause");
+        cout<< "LOS DATOS SON CORRECOTOS? DESEA GUARDARLOS? S/N: ";
+        cin.get (guardar);
+        cin.ignore ();
+        switch (guardar)
+        {
+        case 's':
+        {
+            ca.guardar(cl);
+            system("pause");
+        }
+        break;
+        {
+            case 'S':
+            {
+                ca.guardar(cl);
+                system("pause");
+            }
+            break;
+            case 'n':
+            {
+                altaCliente();
+            }
+            break;
+            case 'N':
+            {
+                altaCliente();
+            }
+            break;
+            default:
+            {
+                gotoxy(50,17);
+                setColor(YELLOW);
+                cls();
+                cout<<"OPCION INCORRECTA!!!"<<endl;
+                cin.get();
+
+            }
+
+
+        }
+        }
     }
 }
 bool bajaCliente()
@@ -230,10 +270,12 @@ bool bajaCliente()
             system("pause");
             return false;
         }
-        else {
-        cl.setActivo(false);
-        cout<< "SE ELIMINO EL REGISTRO CON EXITO";
-        system ("pause");}
+        else
+        {
+            cl.setActivo(false);
+            cout<< "SE ELIMINO EL REGISTRO CON EXITO";
+            system ("pause");
+        }
         return true;
     }
 }
