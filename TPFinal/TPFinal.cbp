@@ -39,17 +39,11 @@
 		<Unit filename="include/Fecha.h" />
 		<Unit filename="include/Habitacion.h" />
 		<Unit filename="include/HabitacionArchivo.h" />
-<<<<<<< HEAD
-		<Unit filename="include/Menu.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-=======
 		<Unit filename="include/Menu.h" />
->>>>>>> e0b7acd9d14889715ff2d49205eefd7256714f61
 		<Unit filename="include/Reserva.h" />
-		<Unit filename="include/ReservaArchivo.h" />
 		<Unit filename="include/Servicio.h" />
 		<Unit filename="include/ServicioArchivo.h" />
+		<Unit filename="include/menu_cliente.h" />
 		<Unit filename="include/rlutil.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />
@@ -59,9 +53,9 @@
 		<Unit filename="src/HabitacionArchivo.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Reserva.cpp" />
-		<Unit filename="src/ReservaArchivo.cpp" />
 		<Unit filename="src/Servicio.cpp" />
 		<Unit filename="src/ServicioArchivo.cpp" />
+		<Unit filename="src/menu_cliente.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

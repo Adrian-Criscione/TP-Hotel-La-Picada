@@ -28,7 +28,6 @@ public:
 
 
 
-
 private:
     int _dni;
     char _nombre [50];

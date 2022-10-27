@@ -47,13 +47,17 @@ int ClienteArchivo::getCantidad() {
 }
 
 int ClienteArchivo::buscar(int dni) {
+ FILE *p;
+    p=fopen("cliente.dat","rb");
+    if(p==NULL) return false;
+ else {
   int cant = getCantidad();
   Cliente cl;
   for (int i = 0; i < cant; i++) {
     cl = leer(i);
     if (cl.getDni() == dni) {
       return i;
-    }
+    }}
   }
   return -1;
 }
@@ -68,7 +72,3 @@ bool ClienteArchivo::ModificarArchivo(int pos){
     return escribio;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e0b7acd9d14889715ff2d49205eefd7256714f61
