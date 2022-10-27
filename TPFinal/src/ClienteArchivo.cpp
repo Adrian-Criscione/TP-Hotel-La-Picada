@@ -23,6 +23,7 @@ bool ClienteArchivo::guardar(Cliente cl) {
   return ok;
 }
 
+
 bool ClienteArchivo::guardar(Cliente cl, int nroRegistro) {
   FILE* p = fopen("cliente.dat", "rb+");
   if (p == NULL) {
@@ -67,4 +68,7 @@ bool ClienteArchivo::ModificarArchivo(int pos){
     return escribio;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e0b7acd9d14889715ff2d49205eefd7256714f61
