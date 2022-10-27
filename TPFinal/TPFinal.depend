@@ -100,3 +100,104 @@
 
 1666909341 c:\users\usuario\documents\github\tp-hotel-la-picada\tpfinal\include\menu_cliente.h
 
+1666911006 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\main.cpp
+	"Menu.h"
+	<iostream>
+
+1666911005 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\menu.h
+	<iostream>
+
+1666911006 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\cliente.cpp
+	<cstring>
+	<iostream>
+	"Cliente.h"
+
+1666911005 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\cliente.h
+	"Fecha.h"
+	<cstring>
+	<iostream>
+
+1666474786 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\fecha.h
+	<string>
+
+1666911006 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\clientearchivo.cpp
+	"ClienteArchivo.h"
+
+1666909049 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\clientearchivo.h
+	"Cliente.h"
+
+1666474786 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\fecha.cpp
+	"fecha.h"
+	<ctime>
+
+1666809005 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\habitacion.cpp
+	<iostream>
+	"Habitacion.h"
+
+1666808632 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\habitacion.h
+	<cstring>
+	<iostream>
+	"Fecha.h"
+
+1666474786 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\habitacionarchivo.cpp
+	"HabitacionArchivo.h"
+
+1666474786 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\habitacionarchivo.h
+	"Habitacion.h"
+
+1666911006 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\menu.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"rlutil.h"
+	"ClienteArchivo.h"
+	"HabitacionArchivo.h"
+	"menu_cliente.h"
+
+1666795440 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1666911006 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\menu_cliente.h
+
+1666911006 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\menu_cliente.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"rlutil.h"
+	"ClienteArchivo.h"
+	"menu_cliente.h"
+
+1666795440 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\reserva.cpp
+	<iostream>
+	"Reserva.h"
+
+1666795440 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\reserva.h
+	<cstring>
+	<iostream>
+	"Fecha.h"
+
+1666474786 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\servicio.cpp
+	"Servicio.h"
+	<iostream>
+
+1666474786 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\servicio.h
+	<cstring>
+	<iostream>
+
+1666474786 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\servicioarchivo.cpp
+	"ServicioArchivo.h"
+
+1666474786 c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\include\servicioarchivo.h
+	"Servicio.h"
+
