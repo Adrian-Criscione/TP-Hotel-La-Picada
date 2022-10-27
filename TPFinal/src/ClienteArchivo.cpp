@@ -66,3 +66,5 @@ bool ClienteArchivo::ModificarArchivo(int pos){
     fclose(p);
     return escribio;
 }
+
+

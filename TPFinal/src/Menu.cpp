@@ -61,8 +61,6 @@ void Menu()
 
         }
         break;
-
-
         case '0':
         {
             cls();
@@ -75,13 +73,13 @@ void Menu()
             case 's':
             {
                 salir=true;
-                cls;
+
             }
             break;
             case 'S':
             {
                 salir=true;
-                cls;
+
             }
             break;
             case 'n':
@@ -217,7 +215,7 @@ void MenuCliente ()
                 cin.get();
 
                 clarchivo.guardar(cl);
-               cls();
+                cls();
             }
         }
         break;
@@ -228,23 +226,33 @@ void MenuCliente ()
             int dni,pos;
             cout<< "INGRESE EL NUMERO DE CLIENTE A MODIFICAR: ";
             cin>>dni;
-             pos=clarchivo.buscar(dni);
+            pos=clarchivo.buscar(dni);
             if(pos<0)
             {
                 cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
                 system("pause");
             }
-            else{
+            else
+            {
 
-            clarchivo.ModificarArchivo(clarchivo.buscar(dni));
-            system("pause");
-        }}
+                clarchivo.ModificarArchivo(clarchivo.buscar(dni));
+
+                system("pause");
+            }
+        }
 
         break;
 
         case '3':
         {
-
+            cls();
+             int dni,pos;
+            cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE PARA BUSCAR EN REGISTROS: ";
+            cin>>dni;
+            pos=clarchivo.buscar(dni);
+            clarchivo.leer(pos);
+            cl.Mostrar(dni);
+                system ("pause");
         }
         break;
         case '4':

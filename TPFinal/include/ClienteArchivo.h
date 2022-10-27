@@ -9,4 +9,5 @@ public:
     int getCantidad();
     int buscar(int );
     bool ModificarArchivo(int pos);
+
 };

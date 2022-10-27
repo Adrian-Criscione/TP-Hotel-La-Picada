@@ -1,8 +1,6 @@
 # depslib dependency file v1.0
-1666416282 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\main.cpp
-	"Cliente.h"
-	"Servicio.h"
-	<iostream>
+1666674945 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\main.cpp
+	"Menu.h"
 
 1666414808 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\fecha.cpp
 	"fecha.h"
@@ -19,12 +17,12 @@
 	<cstring>
 	<iostream>
 
-1666469197 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
+1666756674 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
 	<cstring>
 	<iostream>
 	"Cliente.h"
 
-1666467638 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\cliente.h
+1666756674 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\cliente.h
 	"Fecha.h"
 	<cstring>
 	<iostream>
@@ -39,19 +37,19 @@
 
 1666417919 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\servicio.h
 
-1666469564 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\habitacion.cpp
+1666645021 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\habitacion.cpp
 	<iostream>
 	"Habitacion.h"
 
-1666469557 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\habitacion.h
+1666645021 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\habitacion.h
 	<cstring>
 	<iostream>
 	"Fecha.h"
 
-1666470214 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
+1666756132 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
 	"ClienteArchivo.h"
 
-1666470197 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
+1666756575 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
 	"Cliente.h"
 
 1666470709 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\habitacionarchivo.cpp
@@ -125,4 +123,49 @@
 1666479404 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-finallab2\tpfinal\src\habitacion.cpp
 	<iostream>
 	"Habitacion.h"
+
+1666670706 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu.h
+	<iostream>
+
+1666757437 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"rlutil.h"
+	"ClienteArchivo.h"
+
+1635076140 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1666658591 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
+	<iostream>
+	"Reserva.h"
+
+1666658591 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
+	<cstring>
+	<iostream>
+	"Fecha.h"
+
+1666657505 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reservaarchivo.cpp
+	"ReservaArchivo.h"
+
+1666657446 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reservaarchivo.h
+	"Reserva.h"
+
+1666473237 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\servicioarchivo.cpp
+	"ServicioArchivo.h"
+
+1666471133 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicioarchivo.h
+	"Servicio.h"
 
