@@ -68,7 +68,7 @@ void Cliente::setActivo (bool activo)
 void Cliente::Cargar (int dni)
 {
     int dia, mes, anio;
-   _dni=dni;
+    _dni=dni;
     cout<< "Ingrese Nombre: "<<endl;
     cin>> _nombre;
     cout<<"Ingrese Apellido: "<<endl;
@@ -90,7 +90,8 @@ void Cliente::Cargar (int dni)
 }
 
 
-void Cliente::Mostrar(){
+void Cliente::Mostrar()
+{
     cout<<_nombre<<"  "<<_apellido<<"  "<<"DNI: "<<_dni<<endl;
     cout<<"Edad: "<<_edad<<"  "<<"Email: "<<_mail<<"  "<<endl;
 }

@@ -70,38 +70,12 @@ void Menu()
             switch (exi)
             {
             case 's':
-            {
-                salir=true;
-
-            }
-            break;
             case 'S':
             {
                 salir=true;
 
             }
             break;
-            case 'n':
-            {
-                Menu();
-            }
-            break;
-            case 'N':
-            {
-                Menu();
-            }
-            break;
-            default:
-            {
-                gotoxy(60,19);
-                cls ();
-                setColor(WHITE);
-                cout<<"OPCION INCORRECTA!!!"<<endl;
-                cls();
-                system("pause");
-                mostrar_menu ();
-            }
-
             }
         }
         break;
@@ -113,8 +87,10 @@ void Menu()
             cls();
             cout<<"OPCION INCORRECTA!!!"<<endl;
             cin.get();
+            cin.ignore();
 
         }
+        break;
 
         }
     }
@@ -187,8 +163,8 @@ void MenuHabitacion ()
         cout<<endl;
         gotoxy(50,18);
         cout<<"INGRESE UNA OPCION: ";
-        cin.get(op);
         cin.ignore();
+        cin.get(op);
 
         switch(op)
         {
@@ -235,8 +211,8 @@ void MenuHabitacion ()
             cls();
             gotoxy(50,19);
             cout<<"Seguro que desea volver al menu principal??  S/N: ";
-            cin.get(exi);
             cin.ignore();
+            cin.get(exi);
             switch (exi)
             {
             case 's':

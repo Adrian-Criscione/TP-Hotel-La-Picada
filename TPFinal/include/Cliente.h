@@ -9,7 +9,7 @@ class Cliente
 {
 public:
     int getDni ();
-   string getNombre ();
+    string getNombre ();
     string getApellido ();
     int getEdad ();
     string getMail ();

@@ -59,8 +59,6 @@ void MenuCliente ()
             altaCliente ();
         }
         break;
-
-
         case '2':
         {
             cls();
@@ -81,7 +79,6 @@ void MenuCliente ()
                 system("pause");
             }
         }
-
         break;
         case '3':
         {
@@ -109,14 +106,11 @@ void MenuCliente ()
             bajaCliente();
         }
         break;
-
         case '5':
         {
 
         }
         break;
-
-
         case '0':
         {
             cls();
@@ -127,37 +121,11 @@ void MenuCliente ()
             switch (exi)
             {
             case 's':
-            {
-                Menu();
-                cls;
-            }
-            break;
             case 'S':
             {
-                Menu();
-                cls;
+                return;
             }
             break;
-            case 'n':
-            {
-                MenuCliente();
-            }
-            break;
-            case 'N':
-            {
-                MenuCliente();
-            }
-            break;
-            default:
-            {
-                gotoxy(60,19);
-                cls ();
-                setColor(WHITE);
-                cout<<"OPCION INCORRECTA!!!"<<endl;
-                cls();
-                system("pause");
-                mostrar_menu ();
-            }
 
             }
         }
@@ -170,12 +138,12 @@ void MenuCliente ()
             cls();
             cout<<"OPCION INCORRECTA!!!"<<endl;
             cin.get();
+            cin.ignore();
 
         }
 
         }
     }
-    cin.get();/// DETIENE LA PANTALLA
 
 }
 void altaCliente ()
@@ -196,10 +164,10 @@ void altaCliente ()
     else
     {
         cl.Cargar(dni);
-        cl.Mostrar();
+        cl.Mostrar ();
         cout<< "LOS DATOS SON CORRECOTOS? DESEA GUARDARLOS? S/N: ";
-        cin.get (guardar);
         cin.ignore ();
+        cin.get (guardar);
         switch (guardar)
         {
         case 's':
@@ -208,38 +176,38 @@ void altaCliente ()
             system("pause");
         }
         break;
+
+        case 'S':
         {
-            case 'S':
-            {
-                ca.guardar(cl);
-                system("pause");
-            }
-            break;
-            case 'n':
-            {
-                altaCliente();
-            }
-            break;
-            case 'N':
-            {
-                altaCliente();
-            }
-            break;
-            default:
-            {
-                gotoxy(50,17);
-                setColor(YELLOW);
-                cls();
-                cout<<"OPCION INCORRECTA!!!"<<endl;
-                cin.get();
-
-            }
-
-
+            ca.guardar(cl);
+            system("pause");
         }
+        break;
+        case 'n':
+        {
+            altaCliente();
+        }
+        break;
+        case 'N':
+        {
+            altaCliente();
+        }
+        break;
+        default:
+        {
+            gotoxy(50,17);
+            setColor(YELLOW);
+            cls();
+            cout<<"OPCION INCORRECTA!!!"<<endl;
+            cin.get();
+            system ("pause");
+        }
+
+
         }
     }
 }
+
 bool bajaCliente()
 {
     ///INGRESAR VALOR A BUSCAR
