@@ -76,7 +76,20 @@ void MenuCliente ()
         break;
         case '5':
         {
-
+            Cliente cl;
+            ClienteArchivo ca;
+            int pos=0;
+            pos=ca.getCantidad();
+            for (int i=0; i<pos; i++)
+            {
+                cl=ca.leer(i);
+                if (cl.getActivo()==true)
+                {
+                    cl.Mostrar();
+                    cout<< endl;
+                    cout<< "**"<<endl;
+                }
+            }
         }
         break;
         case '0':
@@ -200,6 +213,7 @@ void consulta ()
         cl=ca.leer(pos);
         if(cl.getActivo()==true)
         {
+            cout<< "activo"<< cl.getActivo()<< "*****"<<endl;
             cl.Mostrar();
             system("pause");
         }
@@ -235,7 +249,7 @@ void modificardatos()
         }
     }
 }
-bool bajaCliente()
+void bajaCliente()
 {
     ///INGRESAR VALOR A BUSCAR
     ///LEER REGISTRO
@@ -243,7 +257,7 @@ bool bajaCliente()
     ///SOBREESCRIBIR REGISTRO MODIFICADO
     Cliente cl;
     ClienteArchivo ca;
-    int dni,pos;
+    int dni=0,pos=-1;
     cls ();
     cout<< "INGRESE EL DNI DEL CLIENTE QUE QUIERE BORRAR DE REGISTROS: ";
     cin>> dni;
@@ -255,22 +269,23 @@ bool bajaCliente()
     }
     else
     {
-
         cl=ca.leer(pos);
-
-
-        if(cl.getActivo() ==false)
+        cl.Mostrar();
+        if(cl.getActivo()==false)
         {
             cout<<"EL REGISTRO EXISTE PERO YA ESTA DADO DE BAJA"<<endl;
             system("pause");
-            return false;
         }
         else
         {
             cl.setActivo(false);
-            cout<< "SE ELIMINO EL REGISTRO CON EXITO"<<endl;
-            system ("pause");
+            if(ca.ModificarArchivo(pos,cl))
+            {
+                cout<< "SE ELIMINO EL REGISTRO CON EXITO"<<endl;
+                system ("pause");
+            }
+
         }
-        return true;
+
     }
 }

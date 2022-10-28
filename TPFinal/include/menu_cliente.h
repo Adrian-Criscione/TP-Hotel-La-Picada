@@ -1,6 +1,6 @@
 
 void MenuCliente();
 void altaCliente ();
-bool bajaCliente();
+void bajaCliente();
 void consulta ();
 void modificardatos ();
