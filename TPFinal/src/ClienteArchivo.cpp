@@ -72,14 +72,16 @@ int ClienteArchivo::buscar(int dni)
 
 
 
-bool ClienteArchivo::ModificarArchivo(int pos)
+bool ClienteArchivo::ModificarArchivo(int pos,Cliente cl)
 {
     FILE *p;
     p=fopen("cliente.dat","rb+");
     if(p==NULL) return false;
     fseek(p, pos * sizeof(Cliente), 0);
+
     bool escribio=fwrite(this, sizeof (Cliente), 1, p);
     fclose(p);
     return escribio;
+
 }
 

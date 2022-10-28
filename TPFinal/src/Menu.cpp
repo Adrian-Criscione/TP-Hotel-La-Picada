@@ -87,7 +87,7 @@ void Menu()
             cls();
             cout<<"OPCION INCORRECTA!!!"<<endl;
             cin.get();
-            cin.ignore();
+
 
         }
         break;

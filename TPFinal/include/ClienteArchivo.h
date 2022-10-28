@@ -8,6 +8,6 @@ public:
     bool guardar(Cliente cl, int nroRegistro);
     int getCantidad();
     int buscar(int );
-    bool ModificarArchivo(int pos);
+    bool ModificarArchivo(int pos, Cliente cl);
 
 };

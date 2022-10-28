@@ -120,10 +120,10 @@
 1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\fecha.h
 	<string>
 
-1666913877 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
+1666926969 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
 	"ClienteArchivo.h"
 
-1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
+1666926969 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
 	"Cliente.h"
 
 1666912333 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\fecha.cpp
@@ -145,7 +145,7 @@
 1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\habitacionarchivo.h
 	"Habitacion.h"
 
-1666919994 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu.cpp
+1666923151 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu.cpp
 	<iostream>
 	<cstring>
 	"Menu.h"
@@ -168,9 +168,9 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu_cliente.h
+1666925199 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu_cliente.h
 
-1666921505 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_cliente.cpp
+1666927527 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_cliente.cpp
 	<iostream>
 	<cstring>
 	"Menu.h"

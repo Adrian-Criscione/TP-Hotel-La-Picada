@@ -10,7 +10,7 @@ using namespace rlutil;
 
 
 //MENU CLIENTES
-void consulta ();
+
 void mostrar_menucliente()
 {
     gotoxy(50,9);
@@ -33,14 +33,12 @@ void mostrar_menucliente()
     cout<<"0 - VOLVER AL MENU PRINCIPAL"<<endl;
 }
 
-
 void MenuCliente ()
 {
     Cliente cl;
     ClienteArchivo ca;
     bool salir=false;
     char po;
-    char exi;
     while(!salir)
     {
         cls();
@@ -62,28 +60,12 @@ void MenuCliente ()
         break;
         case '2':
         {
-            cls();
-            int dni,pos;
-            cout<< "INGRESE EL NUMERO DE CLIENTE A MODIFICAR: ";
-            cin>>dni;
-            pos=ca.buscar(dni);
-            if(pos<0)
-            {
-                cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
-                system("pause");
-            }
-            else
-            {
-
-                ca.ModificarArchivo(ca.buscar(dni));
-
-                system("pause");
-            }
+            modificardatos();
         }
         break;
         case '3':
         {
-           consulta();
+            consulta();
 
         }
         break;
@@ -100,21 +82,23 @@ void MenuCliente ()
         case '0':
         {
             return;
-            /*  cls();
-              gotoxy(50,19);
-              cout<<"Seguro que desea volver al menu principal??  S/N: ";
-              cin.ignore();  ///BORRA EL BUFER DEL TECLADO
-              cin.get(exi);    ///LEE UN CARACTER POR TECLADO
-              switch (exi)
-              {
-              case 's':
-              case 'S':
-              {
-                  return;
-              }
-              break;
 
-              }*/
+            /* cls();
+             char exi;
+             gotoxy(50,19);
+             cin.ignore();  ///BORRA EL BUFER DEL TECLADO
+             cout<<"Seguro que desea volver al menu principal??  S/N: ";
+             cin.get(exi);    ///LEE UN CARACTER POR TECLADO
+             switch (exi)
+             {
+             case 's':
+             case 'S':
+             {
+                 return;
+             }
+             break;
+
+             }*/
         }
         break;
 
@@ -125,12 +109,12 @@ void MenuCliente ()
             cls();
             cout<<"OPCION INCORRECTA!!!"<<endl;
             cin.get();
-            cin.ignore();
+
 
         }
 
         }
-            cin.ignore();
+        cin.ignore();
     }
 
 }
@@ -159,28 +143,30 @@ void altaCliente ()
         switch (guardar)
         {
         case 's':
+        case 'S':
         {
-            ca.guardar(cl);
-            system("pause");
+            if (ca.guardar(cl))
+            {
+                cout<< "CLIENTE GUARDADO CON EXITO";
+                cin.get();
+            }
+            else
+            {
+                cout<< "SE GENERO UN PROBLEMA AL GUARDARLO TIENE QUE VOLVER A CARGAR LOS DATOS";
+                cin.get();
+            }
         }
         break;
 
-        case 'S':
-        {
-            ca.guardar(cl);
-            system("pause");
-        }
-        break;
         case 'n':
-        {
-            altaCliente();
-        }
-        break;
         case 'N':
         {
-            altaCliente();
+            cout<< "LOS DATOS NO HAN SIDO GUARDADOS";
+            cin.get();
+            return;
         }
         break;
+
         default:
         {
             gotoxy(50,17);
@@ -200,21 +186,54 @@ void consulta ()
     Cliente cl;
     ClienteArchivo ca;
     cls();
-            int dni,pos;
-            cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE PARA BUSCAR EN REGISTROS: ";
-            cin>>dni;
-            pos=ca.buscar(dni);
-            if(pos<0)
-            {
-                cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
-                system("pause");
-            }
-            else
-            {
-                cl=ca.leer(pos);
-                cl.Mostrar();
-                system("pause");
-            }
+    int dni,pos;
+    cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE PARA BUSCAR EN REGISTROS: ";
+    cin>>dni;
+    pos=ca.buscar(dni);
+    if(pos<0)
+    {
+        cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
+        system("pause");
+    }
+    else
+    {
+        cl=ca.leer(pos);
+        if(cl.getActivo()==true)
+        {
+            cl.Mostrar();
+            system("pause");
+        }
+    }
+}
+void modificardatos()
+{
+
+    Cliente cl;
+    ClienteArchivo ca;
+    cls();
+    int dni,pos;
+    cout<< "INGRESE EL NUMERO DE CLIENTE A MODIFICAR: ";
+    cin>>dni;
+    pos=ca.buscar(dni);
+    cout<< "Dni    "<< dni<< "   POS     "<< pos<<endl;
+    if(pos<0)
+    {
+        cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
+        system("pause");
+    }
+    else
+    {
+        cl.Cargar(dni);
+        if (ca.ModificarArchivo(pos,cl))
+        {
+            cout<< "DATOS DE CLIENTES MODIFICADOS: "<<endl;
+            cout<< "Dni   "<< dni<< "    POS   "<< pos;
+            cl=ca.leer(pos);
+            cl.Mostrar();
+
+            system("pause");
+        }
+    }
 }
 bool bajaCliente()
 {
@@ -237,8 +256,8 @@ bool bajaCliente()
     else
     {
 
-        ca.leer(pos);
-///FIXME
+        cl=ca.leer(pos);
+
 
         if(cl.getActivo() ==false)
         {
@@ -249,7 +268,7 @@ bool bajaCliente()
         else
         {
             cl.setActivo(false);
-            cout<< "SE ELIMINO EL REGISTRO CON EXITO";
+            cout<< "SE ELIMINO EL REGISTRO CON EXITO"<<endl;
             system ("pause");
         }
         return true;
