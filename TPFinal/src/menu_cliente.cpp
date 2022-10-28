@@ -10,6 +10,7 @@ using namespace rlutil;
 
 
 //MENU CLIENTES
+void consulta ();
 void mostrar_menucliente()
 {
     gotoxy(50,9);
@@ -82,22 +83,7 @@ void MenuCliente ()
         break;
         case '3':
         {
-            cls();
-            int dni,pos;
-            cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE PARA BUSCAR EN REGISTROS: ";
-            cin>>dni;
-            pos=ca.buscar(dni);
-            if(pos<0)
-            {
-                cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
-                system("pause");
-            }
-            else
-            {
-                cl=ca.leer(pos);
-                cl.Mostrar();
-                system("pause");
-            }
+           consulta();
 
         }
         break;
@@ -113,21 +99,22 @@ void MenuCliente ()
         break;
         case '0':
         {
-            cls();
-            gotoxy(50,19);
-            cout<<"Seguro que desea volver al menu principal??  S/N: ";
-            cin.get(exi);    ///LEE UN CARACTER POR TECLADO
-            cin.ignore();  ///BORRA EL BUFER DEL TECLADO
-            switch (exi)
-            {
-            case 's':
-            case 'S':
-            {
-                return;
-            }
-            break;
+            return;
+            /*  cls();
+              gotoxy(50,19);
+              cout<<"Seguro que desea volver al menu principal??  S/N: ";
+              cin.ignore();  ///BORRA EL BUFER DEL TECLADO
+              cin.get(exi);    ///LEE UN CARACTER POR TECLADO
+              switch (exi)
+              {
+              case 's':
+              case 'S':
+              {
+                  return;
+              }
+              break;
 
-            }
+              }*/
         }
         break;
 
@@ -143,6 +130,7 @@ void MenuCliente ()
         }
 
         }
+            cin.ignore();
     }
 
 }
@@ -207,7 +195,27 @@ void altaCliente ()
         }
     }
 }
-
+void consulta ()
+{
+    Cliente cl;
+    ClienteArchivo ca;
+    cls();
+            int dni,pos;
+            cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE PARA BUSCAR EN REGISTROS: ";
+            cin>>dni;
+            pos=ca.buscar(dni);
+            if(pos<0)
+            {
+                cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
+                system("pause");
+            }
+            else
+            {
+                cl=ca.leer(pos);
+                cl.Mostrar();
+                system("pause");
+            }
+}
 bool bajaCliente()
 {
     ///INGRESAR VALOR A BUSCAR
