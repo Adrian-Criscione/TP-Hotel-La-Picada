@@ -6,4 +6,16 @@ void Menu ();
 void mostrar_menu();
 
 void MenuHabitacion();
-
+////////////////////
+///MENU RESERVAS
+///////////////////
+void MenuReservas ();
+void mostrar_menureservas();
+////////////////////
+///MENU CLIENTE
+///////////////////
+void MenuCliente();
+void altaCliente ();
+void bajaCliente();
+void consulta ();
+void modificardatos ();

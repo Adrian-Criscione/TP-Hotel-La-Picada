@@ -3,7 +3,7 @@
 #include "Menu.h"
 #include "rlutil.h"
 #include "ClienteArchivo.h"
-#include "menu_cliente.h"
+
 
 using namespace std;
 using namespace rlutil;
@@ -13,6 +13,7 @@ using namespace rlutil;
 
 void mostrar_menucliente()
 {
+    setBackgroundColor(CYAN);
     gotoxy(50,9);
     setColor(WHITE);
     cout<<" MENU CLIENTE"<<endl;
@@ -42,7 +43,9 @@ void MenuCliente ()
     while(!salir)
     {
         cls();
+
         mostrar_menucliente();
+
         setColor(WHITE);
         gotoxy(50,16);
         cout<<endl;
@@ -94,24 +97,8 @@ void MenuCliente ()
         break;
         case '0':
         {
+             setBackgroundColor(BLACK);
             return;
-
-            /* cls();
-             char exi;
-             gotoxy(50,19);
-             cin.ignore();  ///BORRA EL BUFER DEL TECLADO
-             cout<<"Seguro que desea volver al menu principal??  S/N: ";
-             cin.get(exi);    ///LEE UN CARACTER POR TECLADO
-             switch (exi)
-             {
-             case 's':
-             case 'S':
-             {
-                 return;
-             }
-             break;
-
-             }*/
         }
         break;
 
@@ -121,8 +108,7 @@ void MenuCliente ()
             setColor(YELLOW);
             cls();
             cout<<"OPCION INCORRECTA!!!"<<endl;
-            cin.get();
-
+            anykey();
 
         }
 
@@ -148,6 +134,7 @@ void altaCliente ()
     }
     else
     {
+
         cl.Cargar(dni);
         cl.Mostrar ();
         cout<< "LOS DATOS SON CORRECOTOS? DESEA GUARDARLOS? S/N: ";
@@ -236,9 +223,10 @@ void modificardatos()
         system("pause");
     }
     else
-    {
+    {   cl=ca.leer(pos);
         cl.Cargar(dni);
-        if (ca.ModificarArchivo(pos,cl))
+        ca.ModificarArchivo(pos);
+        if (ca.ModificarArchivo(pos))
         {
             cout<< "DATOS DE CLIENTES MODIFICADOS: "<<endl;
             cout<< "Dni   "<< dni<< "    POS   "<< pos;
@@ -279,7 +267,7 @@ void bajaCliente()
         else
         {
             cl.setActivo(false);
-            if(ca.ModificarArchivo(pos,cl))
+            if(ca.ModificarArchivo(pos))
             {
                 cout<< "SE ELIMINO EL REGISTRO CON EXITO"<<endl;
                 system ("pause");

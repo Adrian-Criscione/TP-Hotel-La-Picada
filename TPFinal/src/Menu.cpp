@@ -2,9 +2,8 @@
 #include <cstring>
 #include "Menu.h"
 #include "rlutil.h"
-#include "ClienteArchivo.h"
 #include "HabitacionArchivo.h"
-#include "menu_cliente.h"
+
 using namespace std;
 using namespace rlutil;
 
@@ -16,6 +15,7 @@ void Menu()
 
     while(!salir)            ///MIENTRAS SEA DISTINTO DE SALIR
     {
+         setConsoleTitle("HOTEL LA PICADA");///CAMBIA EL NOMBRE DE LA CONSOLA
         cls();                     ///LIMPIA LA PANTALLA
         mostrar_menu(); ///LLAMA A MOSTRAR MENU
         setColor(WHITE);
@@ -30,12 +30,16 @@ void Menu()
         {
         case '1':
         {
+            cls ();
+             setBackgroundColor(MAGENTA);
+            MenuReservas();
         }
         break;
 
         case '2':
         {
             cls ();
+             setBackgroundColor(CYAN);
             MenuCliente();
 
         }

@@ -72,7 +72,7 @@ int ClienteArchivo::buscar(int dni)
 
 
 
-bool ClienteArchivo::ModificarArchivo(int pos,Cliente cl)
+bool ClienteArchivo::ModificarArchivo(int pos)
 {
     FILE *p;
     p=fopen("cliente.dat","rb+");

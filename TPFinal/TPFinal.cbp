@@ -41,9 +41,11 @@
 		<Unit filename="include/HabitacionArchivo.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Reserva.h" />
+		<Unit filename="include/ReservaArchivo.h" />
 		<Unit filename="include/Servicio.h" />
 		<Unit filename="include/ServicioArchivo.h" />
 		<Unit filename="include/menu_cliente.h" />
+		<Unit filename="include/menu_reserva.h" />
 		<Unit filename="include/rlutil.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />
@@ -53,9 +55,12 @@
 		<Unit filename="src/HabitacionArchivo.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Reserva.cpp" />
+		<Unit filename="src/ReservaArchivo.cpp" />
+		<Unit filename="src/Reservas.cpp" />
 		<Unit filename="src/Servicio.cpp" />
 		<Unit filename="src/ServicioArchivo.cpp" />
 		<Unit filename="src/menu_cliente.cpp" />
+		<Unit filename="src/menu_reservas.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
