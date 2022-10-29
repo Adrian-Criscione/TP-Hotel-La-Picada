@@ -77,13 +77,13 @@ void Cliente::Cargar (int dni)
     cin>>_edad;
     cout<<"Ingrese Email: "<<endl;
     cin>>_mail;
-    cout<<"Fecha de nacimiento: Ingrese dia: "<<endl;
+    cout<<"Ingrese dia de nacimiento: "<<endl;
     cin>>dia;
     _fechaNacimiento.setDia(dia);
-    cout<<"Fecha de nacimiento: Ingrese mes: "<<endl;
+    cout<<"Ingrese mes de nacimiento: "<<endl;
     cin>>mes;
     _fechaNacimiento.setMes(mes);
-    cout<<"Fecha de nacimiento: Ingrese anio: "<<endl;
+    cout<<"Ingrese anio de nacimiento: "<<endl;
     cin>>anio;
     _fechaNacimiento.setAnio(anio);
     _activo=true;

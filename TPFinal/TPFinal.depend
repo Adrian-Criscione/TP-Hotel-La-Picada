@@ -104,10 +104,10 @@
 	"Menu.h"
 	<iostream>
 
-1667079521 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu.h
+1667080729 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu.h
 	<iostream>
 
-1666913877 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
+1667083939 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
 	<cstring>
 	<iostream>
 	"Cliente.h"
@@ -120,10 +120,10 @@
 1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\fecha.h
 	<string>
 
-1667074774 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
+1667081869 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
 	"ClienteArchivo.h"
 
-1666933456 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
+1667081459 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
 	"Cliente.h"
 
 1666912333 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\fecha.cpp
@@ -168,18 +168,20 @@
 
 1666927915 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu_cliente.h
 
-1667078162 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_cliente.cpp
+1667081996 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_cliente.cpp
 	<iostream>
 	<cstring>
 	"Menu.h"
 	"rlutil.h"
 	"ClienteArchivo.h"
 
-1666912333 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
+1667084376 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
 	<iostream>
 	"Reserva.h"
+	"Fecha.h"
+	"rlutil.h"
 
-1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
+1667083939 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
 	<cstring>
 	<iostream>
 	"Fecha.h"
@@ -206,9 +208,11 @@
 
 1667078357 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reservas.cpp
 
-1667079581 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_reservas.cpp
+1667084603 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_reservas.cpp
 	<iostream>
 	<cstring>
 	"rlutil.h"
 	"Menu.h"
+	"Reserva.h"
+	"ReservaArchivo.h"
 

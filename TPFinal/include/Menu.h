@@ -11,6 +11,7 @@ void MenuHabitacion();
 ///////////////////
 void MenuReservas ();
 void mostrar_menureservas();
+void CargarReserva();
 ////////////////////
 ///MENU CLIENTE
 ///////////////////

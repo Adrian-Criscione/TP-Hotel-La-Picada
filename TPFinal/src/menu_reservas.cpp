@@ -2,6 +2,8 @@
 #include <cstring>
 #include "rlutil.h"
 #include "Menu.h"
+#include "Reserva.h"
+#include "ReservaArchivo.h"
 
 using namespace std;
 using namespace rlutil;
@@ -30,6 +32,8 @@ void MenuReservas ()
         {
         case '1':
         {
+            cls ();
+       CargarReserva();
         }
         break;
 
@@ -86,4 +90,10 @@ void mostrar_menureservas()
     cout<<"0 - SALIR"<<endl;
 }
 
-
+void CargarReserva (){
+Reserva r;
+/////FUNCION QUE CARGUE NUMERO DE RESERVA
+int nr=0;
+r.Cargar(nr);
+nr++;
+}

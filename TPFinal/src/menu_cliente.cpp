@@ -200,7 +200,6 @@ void consulta ()
         cl=ca.leer(pos);
         if(cl.getActivo()==true)
         {
-            cout<< "activo"<< cl.getActivo()<< "*****"<<endl;
             cl.Mostrar();
             system("pause");
         }
@@ -216,7 +215,6 @@ void modificardatos()
     cout<< "INGRESE EL NUMERO DE CLIENTE A MODIFICAR: ";
     cin>>dni;
     pos=ca.buscar(dni);
-    cout<< "Dni    "<< dni<< "   POS     "<< pos<<endl;
     if(pos<0)
     {
         cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
@@ -225,11 +223,11 @@ void modificardatos()
     else
     {   cl=ca.leer(pos);
         cl.Cargar(dni);
-        ca.ModificarArchivo(pos);
-        if (ca.ModificarArchivo(pos))
+
+        if (ca.ModificarArchivo(pos, cl))
         {
             cout<< "DATOS DE CLIENTES MODIFICADOS: "<<endl;
-            cout<< "Dni   "<< dni<< "    POS   "<< pos;
+
             cl=ca.leer(pos);
             cl.Mostrar();
 
@@ -267,7 +265,7 @@ void bajaCliente()
         else
         {
             cl.setActivo(false);
-            if(ca.ModificarArchivo(pos))
+            if(ca.ModificarArchivo(pos,cl))
             {
                 cout<< "SE ELIMINO EL REGISTRO CON EXITO"<<endl;
                 system ("pause");
