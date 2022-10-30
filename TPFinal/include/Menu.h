@@ -19,9 +19,16 @@ void CargarReserva();
 ////////////////////
 ///MENU CLIENTE
 ///////////////////
-/*void MenuCliente();
+void MenuCliente();
 void altaCliente ();
 void bajaCliente();
 void consulta ();
 void modificardatos ();
-*/
+////////////////////
+///MENU HABITACIONES
+///////////////////
+void MenuHabitacion();
+void altaHabitacion();
+void consultaHabitacion();
+void modificarDatosHabitacion();
+void bajaHabitacion();

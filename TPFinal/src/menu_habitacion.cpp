@@ -2,11 +2,11 @@
 #include <cstring>
 #include "Menu.h"
 #include "rlutil.h"
-#include "menu_habitacion.h"
 #include "Habitacion.h"
 #include "HabitacionArchivo.h"
 #include "ClienteArchivo.h"
-#include "menu_cliente.h"
+
+
 using namespace std;
 using namespace rlutil;
 
