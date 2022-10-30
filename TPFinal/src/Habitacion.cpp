@@ -41,12 +41,18 @@ void Habitacion::Cargar(int numero){
     _disponible=true;
     cout<<"Ingrese tipo de habitacion (1-5): "<<endl;
     cout<<"1-HABITACION SIMPLE STANDARD"<<endl;
+    cout<<endl;
     cout<<"2-HABITACION DOBLE STANDARD"<<endl;
+    cout<<endl;
     cout<<"3-HABITACION TRIPLE STANDARD"<<endl;
+    cout<<endl;
     cout<<"4-HABITACION DOBLE PREMIUM"<<endl;
+    cout<<endl;
     cout<<"5-HABITACION TRIPLE PREMIUM"<<endl;
+    cout<<endl;
     cin>>_tipoHabitacion;
     cout<<"Ingrese precio x noche"<<endl;
+    cout<<endl;
     cin>>_precio;
 
 }

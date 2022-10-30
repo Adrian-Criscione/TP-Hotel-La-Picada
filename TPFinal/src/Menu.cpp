@@ -3,12 +3,9 @@
 #include "Menu.h"
 #include "rlutil.h"
 #include "HabitacionArchivo.h"
-<<<<<<< HEAD
 #include "menu_cliente.h"
 #include "menu_habitacion.h"
-=======
 
->>>>>>> ca9121fdf0e6d6c10d48933f578f84582f3df1a6
 using namespace std;
 using namespace rlutil;
 

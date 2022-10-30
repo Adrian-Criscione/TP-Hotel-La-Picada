@@ -200,7 +200,8 @@
 1666912333 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicioarchivo.h
 	"Servicio.h"
 
-<<<<<<< HEAD
+1666912333 D
+
 1667068816 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tpfinal\main.cpp
 	"Menu.h"
 	<iostream>
@@ -315,7 +316,7 @@
 	"menu_cliente.h"
 
 1667088593 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tpfinal\include\menu_habitacion.h
-=======
+
 1666912333 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reservaarchivo.cpp
 	"ReservaArchivo.h"
 
@@ -331,5 +332,153 @@
 	"Menu.h"
 	"Reserva.h"
 	"ReservaArchivo.h"
->>>>>>> ca9121fdf0e6d6c10d48933f578f84582f3df1a6
+
+1667084603 121fdf0e6d6c10d48933f578f84582f3df1a6
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\main.cpp
+	"Menu.h"
+	<iostream>
+
+1667098925 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\menu.h
+	<iostream>
+	"menu_cliente.h"
+	"menu_habitacion.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\cliente.cpp
+	<cstring>
+	<iostream>
+	"Cliente.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\cliente.h
+	"Fecha.h"
+	<cstring>
+	<iostream>
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\fecha.h
+	<string>
+
+1667095355 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\clientearchivo.cpp
+	"ClienteArchivo.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\clientearchivo.h
+	"Cliente.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\fecha.cpp
+	"fecha.h"
+	<ctime>
+
+1667095846 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\habitacion.cpp
+	<iostream>
+	"Habitacion.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\habitacion.h
+	<cstring>
+	<iostream>
+	"Fecha.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\habitacionarchivo.cpp
+	"HabitacionArchivo.h"
+
+1667095422 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\habitacionarchivo.h
+	"Habitacion.h"
+
+1667098878 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\menu.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"rlutil.h"
+	"HabitacionArchivo.h"
+	"menu_cliente.h"
+	"menu_habitacion.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1667092777 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\menu_cliente.h
+
+1667096900 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\menu_habitacion.h
+
+1667092773 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\menu_cliente.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"Menu.h"
+	"menu_cliente.h"
+	"rlutil.h"
+	"ClienteArchivo.h"
+
+1667098577 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\menu_habitacion.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"rlutil.h"
+	"menu_habitacion.h"
+	"Habitacion.h"
+	"HabitacionArchivo.h"
+	"ClienteArchivo.h"
+	"menu_cliente.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\menu_reservas.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"Menu.h"
+	"Reserva.h"
+	"ReservaArchivo.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\reserva.h
+	<cstring>
+	<iostream>
+	"Fecha.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\reservaarchivo.h
+	"Reserva.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
+	<iostream>
+	"Reserva.h"
+	"Fecha.h"
+	"rlutil.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\reservaarchivo.cpp
+	"ReservaArchivo.h"
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\servicio.cpp
+	"Servicio.h"
+	<iostream>
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\servicio.h
+	<cstring>
+	<iostream>
+
+1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\servicioarchivo.cpp
+	"ServicioArchivo.h"
+
+1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\servicioarchivo.h
+	"Servicio.h"
+
+1667101420 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\excursiones.cpp
+	<cstring>
+	<iostream>
+	"Excursiones.h"
+
+1667101065 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\excursiones.h
+
+1667100987 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\comidas.cpp
+	<cstring>
+	<iostream>
+	"Comidas.h"
+
+1667100917 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\comidas.h
 
