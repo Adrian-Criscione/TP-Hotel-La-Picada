@@ -10,7 +10,7 @@ class Reserva
 private:
     int _numeroreserva;
     int _dniCliente;
-    int _legajoEmpleado;
+    int _numerohabitacion;
     int _codigoServicio;
     char _medioDePago [50];
     Fecha _fechaReserva;
@@ -22,7 +22,8 @@ private:
 public:
     int getNumeroReserva ();
     int getDniCliente ();
-    int getLegajoEmpleado ();
+    int getNumeroHabitacion ();
+
     int getCodigoServicio ();
     string getMedioDePago ();
     Fecha getFechaReserva ();
@@ -32,7 +33,7 @@ public:
     bool getActivo ();
     void setNumeroReserva (int numeroreserva);
     void setDniCliente (int dniCliente);
-    void setLegajoEmpleado (int legajoEmpleado);
+    void setNumeroHabitacion (int numerohabitacion);
     void setCodigoServicio (int codigoServicio);
     void setMedioDePago (string medioDePago);
     void setFechaReserva (Fecha fechaReserva);
@@ -40,6 +41,8 @@ public:
     void setMonto (float monto);
     void setAbonado (bool abonado);
     void setActivo (bool activo);
+    void Cargar(int numeroreserva);
+    void Mostrar();
 };
 
 #endif // RESERVA_H

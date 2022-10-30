@@ -1,18 +1,14 @@
 #include <iostream>
 #include <cstring>
-#include "Menu.h"
 #include "rlutil.h"
-#include "HabitacionArchivo.h"
-<<<<<<< HEAD
-#include "menu_cliente.h"
-#include "menu_habitacion.h"
-=======
+#include "Menu.h"
+#include "Reserva.h"
+#include "ReservaArchivo.h"
 
->>>>>>> ca9121fdf0e6d6c10d48933f578f84582f3df1a6
 using namespace std;
 using namespace rlutil;
 
-void Menu()
+void MenuReservas ()
 {
     bool salir=false; ///VARIABLE PARA EL while
     char op;          ///VARIABLE PARA LA OPCION
@@ -20,9 +16,10 @@ void Menu()
 
     while(!salir)            ///MIENTRAS SEA DISTINTO DE SALIR
     {
-         setConsoleTitle("HOTEL LA PICADA");///CAMBIA EL NOMBRE DE LA CONSOLA
+
         cls();                     ///LIMPIA LA PANTALLA
-        mostrar_menu(); ///LLAMA A MOSTRAR MENU
+        mostrar_menureservas();
+
         setColor(WHITE);
         gotoxy(50,16);
         cout<<endl;
@@ -36,101 +33,67 @@ void Menu()
         case '1':
         {
             cls ();
-             setBackgroundColor(MAGENTA);
-            MenuReservas();
+       CargarReserva();
         }
         break;
 
         case '2':
         {
-            cls ();
-             setBackgroundColor(CYAN);
-            MenuCliente();
-
         }
         break;
 
         case '3':
         {
-            cls();
-            MenuHabitacion();
+
         }
         break;
-        case '4':
+       case '0':
         {
-
+            setBackgroundColor(BLACK);
+            return;
         }
         break;
 
-        case '5':
-        {
-
-        }
-        break;
-
-
-        case '0':
-        {
-            cls();
-            gotoxy(50,19);
-            cout<<"Seguro que desea salir??  S/N: ";
-            cin.get(exi);    ///LEE UN CARACTER POR TECLADO
-            cin.ignore();  ///BORRA EL BUFER DEL TECLADO
-            switch (exi)
-            {
-            case 's':
-            case 'S':
-            {
-                salir=true;
-
-            }
-            break;
-            }
-        }
-        break;
-
-        default:
+    default:
         {
             gotoxy(50,17);
             setColor(YELLOW);
             cls();
             cout<<"OPCION INCORRECTA!!!"<<endl;
             cin.get();
-
-
         }
         break;
-
         }
-    }
-    cin.get();/// DETIENE LA PANTALLA
 
-}
 
-void mostrar_menu()
+cin.get();/// DETIENE LA PANTALLA
+
+}}
+
+void mostrar_menureservas()
 {
     gotoxy(50,9);
     setColor(WHITE);
-    cout<<" MENU PRINCIPAL"<<endl;
+    cout<<" MENU RESERVAS"<<endl;
     gotoxy(50,10);
     cout<<"---------------------"<<endl;
     gotoxy(50,11);
-    cout<<"1 - RESERVA"<<endl;
+    cout<<"1 - CARGAR NUEVA RESERVA"<<endl;
     gotoxy(50,12);
-    cout<<"2 - CLIENTES"<<endl;
+    cout<<"2 - BUSCAR RESERVA"<<endl;
     gotoxy(50,13);
-    cout<<"3 - HABITACIONES"<<endl;
+    cout<<"3 - CANCELAR RESERVA"<<endl;
     gotoxy(50,14);
-    cout<<"4 - SERVICIOS"<<endl;
-    gotoxy(50,15);
-    cout<<"5 - INFORMES"<<endl;
-    gotoxy(50,16);
     cout<<"---------------------"<<endl;
-    gotoxy(50,17);
+    gotoxy(50,15);
     setColor(YELLOW);
     cout<<"0 - SALIR"<<endl;
 }
 
-
-
-
+void CargarReserva (){
+Reserva r;
+/////FUNCION QUE CARGUE NUMERO DE RESERVA
+int nr=0;
+r.Cargar(nr);
+nr++;
+}

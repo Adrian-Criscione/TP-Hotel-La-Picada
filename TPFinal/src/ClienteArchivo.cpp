@@ -70,15 +70,23 @@ int ClienteArchivo::buscar(int dni)
     return -1;
 }
 
+<<<<<<< HEAD
 
 bool ClienteArchivo::ModificarArchivo(int pos,Cliente cl)
+=======
+bool ClienteArchivo::ModificarArchivo(int pos, Cliente cl)
+>>>>>>> ca9121fdf0e6d6c10d48933f578f84582f3df1a6
 {
     FILE *p;
     p=fopen("cliente.dat","rb+");
     if(p==NULL) return false;
     fseek(p, pos * sizeof(Cliente), 0);
 
+<<<<<<< HEAD
     bool escribio=fwrite(&cl,pos * sizeof (Cliente), 1, p);
+=======
+    bool escribio=fwrite(&cl, sizeof (Cliente), 1, p);
+>>>>>>> ca9121fdf0e6d6c10d48933f578f84582f3df1a6
     fclose(p);
     return escribio;
 
