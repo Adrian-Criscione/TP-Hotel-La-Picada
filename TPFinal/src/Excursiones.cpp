@@ -1,9 +1,14 @@
 #include <cstring>
 #include <iostream>
 #include "Excursiones.h"
+#include "ExcursionesArchivo.h"
 using namespace std;
+
 int Excursiones::getIdExcursion(){
     return _idExcursion;
+}
+int Excursiones::getNumExcursion(){
+    return _numExcursion;
 }
 
 float Excursiones::getPrecio(){
@@ -14,8 +19,15 @@ bool Excursiones::getDisponible(){
     return _disponible;
 }
 
-void Excursiones::setIdExcursion(int idExcursion){
-    _idExcursion = idExcursion;
+void Excursiones::setIdExcursion(){
+    ExcursionesArchivo exa;
+    int id = exa.getCantidad();
+    id++;
+    _idExcursion=id;
+}
+
+void Excursiones::setNumExcursion(int numExcursion){
+    _numExcursion = numExcursion;
 }
 
 void Excursiones::setPrecio(float precio){

@@ -1,11 +1,14 @@
 #include <cstring>
 #include <iostream>
 #include "Comidas.h"
+#include "ComidasArchivo.h"
 using namespace std;
 int Comidas::getIdComida(){
     return _idComida;
 }
-
+int Comidas::getNumComida(){
+    return _numComida;
+}
 float Comidas::getPrecio(){
     return _precio;
 }
@@ -14,8 +17,15 @@ bool Comidas::getDisponible(){
     return _disponible;
 }
 
-void Comidas::setIdComida(int idComida){
-    _idComida = idComida;
+void Comidas::setIdComida(){
+      ComidasArchivo coa;
+    int id = coa.getCantidad();
+    id++;
+    _idComida=id;
+}
+
+void Comidas::setNumComida(int numComida){
+    _numComida = numComida;
 }
 
 void Comidas::setPrecio(float precio){

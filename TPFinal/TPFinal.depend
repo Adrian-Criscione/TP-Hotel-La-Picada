@@ -335,7 +335,7 @@
 
 1667084603 121fdf0e6d6c10d48933f578f84582f3df1a6
 
-1667091447 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\main.cpp
+1667141340 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\main.cpp
 	"Menu.h"
 	<iostream>
 
@@ -418,7 +418,7 @@
 	"rlutil.h"
 	"ClienteArchivo.h"
 
-1667098577 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\menu_habitacion.cpp
+1667101630 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\menu_habitacion.cpp
 	<iostream>
 	<cstring>
 	"Menu.h"
@@ -468,17 +468,34 @@
 1667091447 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\servicioarchivo.h
 	"Servicio.h"
 
-1667101420 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\excursiones.cpp
+1667140976 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\excursiones.cpp
 	<cstring>
 	<iostream>
 	"Excursiones.h"
+	"ExcursionesArchivo.h"
 
-1667101065 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\excursiones.h
+1667140900 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\excursiones.h
+	"Fecha.h"
+	<cstring>
+	<iostream>
 
-1667100987 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\comidas.cpp
+1667143036 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\comidas.cpp
 	<cstring>
 	<iostream>
 	"Comidas.h"
+	"ComidasArchivo.h"
 
-1667100917 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\comidas.h
+1667142721 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\comidas.h
+	"Fecha.h"
+	<cstring>
+	<iostream>
+
+1667139990 source:c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\src\excursionesarchivo.cpp
+	"ExcursionesArchivo.h"
+
+1667139725 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\excursionesarchivo.h
+	"Excursiones.h"
+
+1667141911 c:\users\agus\onedrive\documentos\laboratorio-2\tp-hotel-la-picada\tp-hotel-la-picada\tpfinal\include\comidasarchivo.h
+	"Comidas.h"
 
