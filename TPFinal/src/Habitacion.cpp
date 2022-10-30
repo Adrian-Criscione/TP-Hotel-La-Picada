@@ -36,9 +36,9 @@ void Habitacion::setDisponible (bool disponible)
 {
     _disponible=disponible;
 }
-void Habitacion::Cargar(){
-    cout<<"Ingrese numero de habitacion: "<<endl;
-    cin>>_numero;
+void Habitacion::Cargar(int numero){
+    _numero = numero;
+    _disponible=true;
     cout<<"Ingrese tipo de habitacion (1-5): "<<endl;
     cout<<"1-HABITACION SIMPLE STANDARD"<<endl;
     cout<<"2-HABITACION DOBLE STANDARD"<<endl;

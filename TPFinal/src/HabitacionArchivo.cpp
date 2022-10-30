@@ -56,3 +56,17 @@ int HabitacionArchivo::buscar(int numero) {
   }
   return -1;
 }
+
+
+bool HabitacionArchivo::modificarArchivo(int pos,Habitacion ha)
+{
+    FILE *p;
+    p=fopen("habitacion.dat","rb+");
+    if(p==NULL) return false;
+    fseek(p, pos * sizeof(Habitacion), 0);
+
+    bool escribio=fwrite(&ha, pos * sizeof (Habitacion), 1, p);
+    fclose(p);
+    return escribio;
+
+}

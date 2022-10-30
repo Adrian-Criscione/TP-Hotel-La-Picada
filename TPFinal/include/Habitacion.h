@@ -22,7 +22,7 @@ public:
     void setPrecio (float);
     void setTipoHabitacion(int);
     void setDisponible (bool);
-    void Cargar();
+    void Cargar(int numero);
     void Mostrar();
 };
 

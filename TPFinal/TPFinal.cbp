@@ -44,6 +44,7 @@
 		<Unit filename="include/Servicio.h" />
 		<Unit filename="include/ServicioArchivo.h" />
 		<Unit filename="include/menu_cliente.h" />
+		<Unit filename="include/menu_habitacion.h" />
 		<Unit filename="include/rlutil.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />
@@ -56,6 +57,7 @@
 		<Unit filename="src/Servicio.cpp" />
 		<Unit filename="src/ServicioArchivo.cpp" />
 		<Unit filename="src/menu_cliente.cpp" />
+		<Unit filename="src/menu_habitacion.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

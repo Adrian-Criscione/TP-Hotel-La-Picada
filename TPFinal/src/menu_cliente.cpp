@@ -150,7 +150,7 @@ void altaCliente ()
     {
         cl.Cargar(dni);
         cl.Mostrar ();
-        cout<< "LOS DATOS SON CORRECOTOS? DESEA GUARDARLOS? S/N: ";
+        cout<< "LOS DATOS SON CORRECTOS? DESEA GUARDARLOS? S/N: ";
         cin.ignore ();
         cin.get (guardar);
         switch (guardar)

@@ -5,5 +5,5 @@ using namespace std;
 void Menu ();
 void mostrar_menu();
 
-void MenuHabitacion();
+
 

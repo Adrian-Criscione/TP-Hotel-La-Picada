@@ -8,4 +8,5 @@ public:
     bool guardar(Habitacion h, int nroRegistro);
     int getCantidad();
     int buscar(int );
+    bool modificarArchivo(int pos,Habitacion ha);
 };

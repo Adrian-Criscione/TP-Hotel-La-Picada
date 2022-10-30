@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
-	<ActiveTarget name="Debug" />
-	<File name="include\ClienteArchivo.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<ActiveTarget name="Release" />
+	<File name="include\HabitacionArchivo.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="277" topLine="0" />
+			<Cursor1 position="300" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\menu_cliente.cpp" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4868" topLine="267" />
 		</Cursor>
 	</File>
 	<File name="src\Menu.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1983" topLine="63" />
+			<Cursor1 position="1143" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src\ClienteArchivo.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1671" topLine="62" />
+		</Cursor>
+	</File>
+	<File name="src\menu_habitacion.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5497" topLine="218" />
+		</Cursor>
+	</File>
+	<File name="src\Cliente.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1075" topLine="63" />
 		</Cursor>
 		<Folding>
-			<Collapse line="31" />
-			<Collapse line="36" />
-			<Collapse line="44" />
 			<Collapse line="50" />
-			<Collapse line="56" />
+			<Collapse line="54" />
+			<Collapse line="59" />
+			<Collapse line="93" />
 		</Folding>
 	</File>
-	<File name="src\HabitacionArchivo.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\ClienteArchivo.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="287" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Habitacion.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="734" topLine="33" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -29,19 +53,24 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\menu_cliente.cpp" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Fecha.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4305" topLine="252" />
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Menu.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="86" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\menu_cliente.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="104" topLine="0" />
+			<Cursor1 position="2" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Fecha.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\HabitacionArchivo.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="1528" topLine="48" />
 		</Cursor>
 	</File>
 	<File name="include\Cliente.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -49,36 +78,41 @@
 			<Cursor1 position="221" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\HabitacionArchivo.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Habitacion.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="558" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="include\Menu.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="110" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ClienteArchivo.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1671" topLine="9" />
-		</Cursor>
-		<Folding>
-			<Collapse line="3" />
-			<Collapse line="18" />
-			<Collapse line="31" />
-			<Collapse line="44" />
-			<Collapse line="57" />
-		</Folding>
-	</File>
-	<File name="src\Cliente.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1075" topLine="59" />
-		</Cursor>
-		<Folding>
-			<Collapse line="50" />
-			<Collapse line="54" />
-			<Collapse line="59" />
-		</Folding>
-	</File>
+	<Target name="Debug" top="src\menu_cliente.cpp">
+		<File name="include\menu_habitacion.h" />
+		<File name="include\Cliente.h" />
+		<File name="src\Cliente.cpp" />
+		<File name="src\ClienteArchivo.cpp" />
+		<File name="src\Menu.cpp" />
+		<File name="src\menu_cliente.cpp" />
+		<File name="main.cpp" />
+		<File name="include\menu_cliente.h" />
+		<File name="include\ClienteArchivo.h" />
+		<File name="src\menu_habitacion.cpp" />
+		<File name="src\HabitacionArchivo.cpp" />
+		<File name="include\Menu.h" />
+		<File name="src\Habitacion.cpp" />
+		<File name="include\Habitacion.h" />
+	</Target>
+	<Target name="Release" top="src\menu_cliente.cpp">
+		<File name="include\Cliente.h" />
+		<File name="src\Cliente.cpp" />
+		<File name="src\ClienteArchivo.cpp" />
+		<File name="src\Menu.cpp" />
+		<File name="src\menu_cliente.cpp" />
+		<File name="main.cpp" />
+		<File name="include\menu_cliente.h" />
+		<File name="include\ClienteArchivo.h" />
+		<File name="src\menu_habitacion.cpp" />
+		<File name="src\HabitacionArchivo.cpp" />
+		<File name="include\Menu.h" />
+		<File name="src\Habitacion.cpp" />
+		<File name="include\Habitacion.h" />
+		<File name="include\HabitacionArchivo.h" />
+	</Target>
 </CodeBlocks_layout_file>
