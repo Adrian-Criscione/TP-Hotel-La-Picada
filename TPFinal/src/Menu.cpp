@@ -50,6 +50,7 @@ void Menu()
         case '3':
         {
             cls();
+            setBackgroundColor(GREEN);
             MenuHabitacion();
         }
         break;
