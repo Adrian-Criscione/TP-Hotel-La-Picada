@@ -79,7 +79,7 @@ void Menu()
             case 'S':
             {
                 salir=true;
-
+                return;
             }
             break;
             }
