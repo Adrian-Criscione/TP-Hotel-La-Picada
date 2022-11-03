@@ -47,6 +47,24 @@ void MenuReservas ()
 
         }
         break;
+        case '5':
+        {
+            Reserva r;
+            ReservaArchivo ra;
+            int pos=0;
+            pos=ra.getCantidad();
+            for (int i=0; i<pos; i++)
+            {
+                r=ra.leer(i);
+                if (r.getActivo()==true)
+                {
+                    r.Mostrar();
+                    cout<< endl;
+                    cout<< "**"<<endl;
+                }
+            }
+        }
+        break;
        case '0':
         {
             setBackgroundColor(BLACK);
@@ -92,8 +110,14 @@ void mostrar_menureservas()
 
 void CargarReserva (){
 Reserva r;
+ReservaArchivo ra;
 /////FUNCION QUE CARGUE NUMERO DE RESERVA
-int nr=0;
-r.Cargar(nr);
+
+int nr;
+int dni;
+dni=ConsultaCliente ();
+r.Cargar(nr,dni);
+ra.guardar (r);
 nr++;
 }
+

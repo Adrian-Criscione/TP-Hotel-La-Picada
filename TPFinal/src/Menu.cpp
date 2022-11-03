@@ -2,7 +2,6 @@
 #include <cstring>
 #include "Menu.h"
 #include "rlutil.h"
-#include "HabitacionArchivo.h"
 #include "menu_cliente.h"
 #include "menu_habitacion.h"
 
@@ -17,7 +16,7 @@ void Menu()
 
     while(!salir)            ///MIENTRAS SEA DISTINTO DE SALIR
     {
-         setConsoleTitle("HOTEL LA PICADA");///CAMBIA EL NOMBRE DE LA CONSOLA
+        setConsoleTitle("HOTEL LA PICADA");///CAMBIA EL NOMBRE DE LA CONSOLA
         cls();                     ///LIMPIA LA PANTALLA
         mostrar_menu(); ///LLAMA A MOSTRAR MENU
         setColor(WHITE);
@@ -33,7 +32,7 @@ void Menu()
         case '1':
         {
             cls ();
-             setBackgroundColor(MAGENTA);
+            setBackgroundColor(MAGENTA);
             MenuReservas();
         }
         break;
@@ -41,7 +40,7 @@ void Menu()
         case '2':
         {
             cls ();
-             setBackgroundColor(CYAN);
+            setBackgroundColor(CYAN);
             MenuCliente();
 
         }
@@ -89,13 +88,7 @@ void Menu()
 
         default:
         {
-            gotoxy(50,17);
-            setColor(YELLOW);
-            cls();
-            cout<<"OPCION INCORRECTA!!!"<<endl;
-            cin.get();
-
-
+            msjerror ();
         }
         break;
 
@@ -129,6 +122,16 @@ void mostrar_menu()
     cout<<"0 - SALIR"<<endl;
 }
 
+void msjerror ()
+{
+    gotoxy(50,17);
+    setColor(YELLOW);
+    cls();
+    cout<<"OPCION INCORRECTA!!!"<<endl;
+    cin.get();
+    system ("pause");
+
+}
 
 
 

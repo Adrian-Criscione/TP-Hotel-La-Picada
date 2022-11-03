@@ -103,20 +103,19 @@ void Reserva::setAbonado(bool abonado)
 
     _abonado = abonado;
 }
+
 void Reserva::setActivo(bool activo)
 {
 
     _activo = activo;
 }
 
-void Reserva::Cargar(int numeroreserva)
+void Reserva::Cargar(int numeroreserva, int dni)
 {
     char op;
     int dia, mes, anio;
-
+    _dniCliente=dni;
     _numeroreserva =numeroreserva;
-    cout<< "INGRESE DNI DEL CLIENTE: "<<endl;
-    cin>> _dniCliente;
     cout<< "Ingrese el numero de habitacion: "<<endl;
     cin>> _numerohabitacion;
 
@@ -156,7 +155,8 @@ void Reserva::Cargar(int numeroreserva)
         _abonado=false;
     }
     break;
-   /* default:
+    /*
+    default:
     {
         gotoxy(50,17);
         setColor(YELLOW);
@@ -166,13 +166,25 @@ void Reserva::Cargar(int numeroreserva)
 
 
     }
-    break;*/
-
+    break;
+*/
     }
     _activo=true;
 }
 
+void Reserva::Mostrar() {
 
-void Mostrar() {}
+    cout<< "NUMERO RESERVA "<< _numeroreserva<<endl;
+    cout<< "DNI CLIENTE "<< _dniCliente<<endl;
+    cout<< "NUMERO HABITACION "<< _numerohabitacion<<endl;
+    cout<< "CODIGO SERVICIO "<< _codigoServicio<<endl;
+    cout<< "MEDIO PAGO "<< _medioDePago<<endl ;
+///    cout<< "FECHA " <<_fechaReserva<<endl;
+    cout<< "CANAL RESERVA "<< _canalDeReserva<<endl;
+    cout<< "MONTO "<< _monto<<endl;
+    cout<< "ABONADO "<< _abonado<<endl;
+    cout<< "ACTIVO "<< _activo<<endl;
+
+}
 
 

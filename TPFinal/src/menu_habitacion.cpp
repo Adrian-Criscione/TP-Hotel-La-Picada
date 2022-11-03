@@ -4,7 +4,6 @@
 #include "rlutil.h"
 #include "Habitacion.h"
 #include "HabitacionArchivo.h"
-#include "ClienteArchivo.h"
 
 
 using namespace std;
@@ -12,7 +11,7 @@ using namespace rlutil;
 
 void mostrar_menuhabitacion()
 {
-    setBackgroundColor(GREEN);
+
     gotoxy(50,9);
     setColor(WHITE);
     cout<<" MENU HABITACIONES"<<endl;
@@ -94,11 +93,7 @@ void MenuHabitacion ()
 
         default:
         {
-            gotoxy(50,17);
-            setColor(YELLOW);
-            cls();
-            cout<<"OPCION INCORRECTA!!!"<<endl;
-            cin.get();
+           msjerror ();
 
         }
 
@@ -162,12 +157,7 @@ void altaHabitacion ()
 
         default:
         {
-            gotoxy(50,17);
-            setColor(YELLOW);
-            cls();
-            cout<<"OPCION INCORRECTA!!!"<<endl;
-            cin.get();
-            system ("pause");
+          msjerror ();
         }
 
 

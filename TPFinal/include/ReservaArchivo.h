@@ -8,4 +8,5 @@ public:
     bool guardar(Reserva r, int nroRegistro);
     int getCantidad();
     //int buscar(int );
+
 };

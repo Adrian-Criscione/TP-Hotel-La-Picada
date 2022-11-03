@@ -5,7 +5,7 @@ using namespace std;
 
 void Menu ();
 void mostrar_menu();
-
+void msjerror ();
 
 
 
@@ -21,8 +21,9 @@ void CargarReserva();
 ///////////////////
 void MenuCliente();
 void altaCliente ();
+int alta();
 void bajaCliente();
-void consulta ();
+int ConsultaCliente ();
 void modificardatos ();
 ////////////////////
 ///MENU HABITACIONES

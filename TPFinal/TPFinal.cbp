@@ -48,9 +48,6 @@
 		<Unit filename="include/ReservaArchivo.h" />
 		<Unit filename="include/Servicio.h" />
 		<Unit filename="include/ServicioArchivo.h" />
-		<Unit filename="include/menu_cliente.h" />
-		<Unit filename="include/menu_habitacion.h" />
-		<Unit filename="include/menu_reserva.h" />
 		<Unit filename="include/rlutil.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />

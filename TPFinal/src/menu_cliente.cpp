@@ -69,7 +69,7 @@ void MenuCliente ()
         break;
         case '3':
         {
-            consulta();
+            ConsultaCliente();
 
         }
         break;
@@ -98,18 +98,14 @@ void MenuCliente ()
         break;
         case '0':
         {
-             setBackgroundColor(BLACK);
+            setBackgroundColor(BLACK);
             return;
         }
         break;
 
         default:
         {
-            gotoxy(50,17);
-            setColor(YELLOW);
-            cls();
-            cout<<"OPCION INCORRECTA!!!"<<endl;
-            anykey();
+            msjerror ();
 
         }
 
@@ -130,12 +126,50 @@ void altaCliente ()
     pos=ca.buscar(dni);
     if(pos>=0)
     {
-        cout<<"EL NUMERO DE DNI DE CLIENTE YA SE ENCUENTRA EN NUESTROS REGISTROS"<<endl;
-        system("pause");
+        cl=ca.leer(pos);
+        if(cl.getActivo())
+        {
+
+            cout<<"EL NUMERO DE DNI DE CLIENTE YA SE ENCUENTRA EN NUESTROS REGISTROS"<<endl;
+            system("pause");
+        }
+        else
+        {
+            char alta;
+            cout<< "EL NUMERO DE DNI DE CLIENTE YA SE ENCUENTRA EN NUESTROS REGISTROS PERO ESTA DADO DE BAJA"<<endl;
+            cout<< "DESEA DARLE DE ALTA? S/N: ";
+            cin.ignore();
+            cin.get(alta);
+            switch (alta)
+            {
+            case 's':
+            case 'S':
+            {
+                cl.setActivo(true);
+                ca.guardar(cl,pos);
+                cl.Mostrar();
+                cin.get();
+            }
+            break;
+
+            case 'n':
+            case 'N':
+            {
+                return;
+            }
+            break;
+
+            default:
+            {
+                msjerror ();
+            }
+
+            }
+
+        }
     }
     else
     {
-
         cl.Cargar(dni);
         cl.Mostrar ();
         cout<< "LOS DATOS SON CORRECTOS? DESEA GUARDARLOS? S/N: ";
@@ -148,12 +182,12 @@ void altaCliente ()
         {
             if (ca.guardar(cl))
             {
-                cout<< "CLIENTE GUARDADO CON EXITO";
+                cout<< "CLIENTE GUARDADO CON EXITO"<<endl;
                 cin.get();
             }
             else
             {
-                cout<< "SE GENERO UN PROBLEMA AL GUARDARLO TIENE QUE VOLVER A CARGAR LOS DATOS";
+                cout<< "SE GENERO UN PROBLEMA AL GUARDARLO TIENE QUE VOLVER A CARGAR LOS DATOS"<<endl;
                 cin.get();
             }
         }
@@ -162,49 +196,73 @@ void altaCliente ()
         case 'n':
         case 'N':
         {
-            cout<< "LOS DATOS NO HAN SIDO GUARDADOS";
+            cout<< "LOS DATOS NO HAN SIDO GUARDADOS"<<endl;
             cin.get();
-            return;
         }
         break;
 
         default:
         {
-            gotoxy(50,17);
-            setColor(YELLOW);
-            cls();
-            cout<<"OPCION INCORRECTA!!!"<<endl;
-            cin.get();
-            system ("pause");
+           msjerror ();
         }
 
 
         }
     }
 }
-void consulta ()
+int ConsultaCliente ()
 {
     Cliente cl;
     ClienteArchivo ca;
+    char op;
     cls();
+
     int dni,pos;
-    cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE PARA BUSCAR EN REGISTROS: ";
+    cout<< "INGRESE EL NUMERO DE DNI DE CLIENTE: ";
     cin>>dni;
     pos=ca.buscar(dni);
     if(pos<0)
     {
         cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
+        cout<< "DESEA DARLO DE ALTA?? S/N:";
+        cin.ignore();
+        cin.get(op);
+        switch (op)
+        {
+        case 's':
+        case 'S':
+        {
+            altaCliente();
+        }
+        break;
+        case 'n':
+        case 'N':
+        {
+            return 0;
+        }
+        default:
+        {
+            msjerror ();
+
+        }
+        }
         system("pause");
     }
     else
     {
         cl=ca.leer(pos);
-        if(cl.getActivo()==true)
+        if(cl.getActivo())
         {
             cl.Mostrar();
             system("pause");
         }
+        else
+        {
+            cout<< "EL CLIENTE ESTA DADO DE BAJA";
+            cin.get();
+        }
     }
+    return dni;
 }
 void modificardatos()
 {
@@ -222,7 +280,8 @@ void modificardatos()
         system("pause");
     }
     else
-    {   cl=ca.leer(pos);
+    {
+        cl=ca.leer(pos);
         cl.Cargar(dni);
 
         if (ca.ModificarArchivo(pos, cl))
@@ -238,19 +297,16 @@ void modificardatos()
 }
 void bajaCliente()
 {
-    ///INGRESAR VALOR A BUSCAR
-    ///LEER REGISTRO
-    ///MODIFICAR ESTADO DEL REGISTRO
-    ///SOBREESCRIBIR REGISTRO MODIFICADO
     Cliente cl;
     ClienteArchivo ca;
-    int dni=0,pos=-1;
+    int dni,pos=-1;
     cls ();
     cout<< "INGRESE EL DNI DEL CLIENTE QUE QUIERE BORRAR DE REGISTROS: ";
     cin>> dni;
     pos=ca.buscar(dni);
     if(pos<0)
     {
+        char alta;
         cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
         system("pause");
     }
@@ -276,3 +332,4 @@ void bajaCliente()
 
     }
 }
+
