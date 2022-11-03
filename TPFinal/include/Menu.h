@@ -16,6 +16,8 @@ void MenuHabitacion();
 void MenuReservas ();
 void mostrar_menureservas();
 void CargarReserva();
+void BuscarReserva ();
+void CancelarReserva ();
 ////////////////////
 ///MENU CLIENTE
 ///////////////////
@@ -30,6 +32,6 @@ void modificardatos ();
 ///////////////////
 void MenuHabitacion();
 void altaHabitacion();
-void consultaHabitacion();
+int consultaHabitacion();
 void modificarDatosHabitacion();
 void bajaHabitacion();

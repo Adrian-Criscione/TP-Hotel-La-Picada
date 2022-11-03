@@ -33,18 +33,19 @@ void MenuReservas ()
         case '1':
         {
             cls ();
-       CargarReserva();
+            CargarReserva();
         }
         break;
 
         case '2':
         {
+            BuscarReserva ();
         }
         break;
 
         case '3':
         {
-
+            CancelarReserva ();
         }
         break;
         case '5':
@@ -65,28 +66,25 @@ void MenuReservas ()
             }
         }
         break;
-       case '0':
+        case '0':
         {
             setBackgroundColor(BLACK);
             return;
         }
         break;
 
-    default:
+        default:
         {
-            gotoxy(50,17);
-            setColor(YELLOW);
-            cls();
-            cout<<"OPCION INCORRECTA!!!"<<endl;
-            cin.get();
+            msjerror ();
         }
         break;
         }
 
 
-cin.get();/// DETIENE LA PANTALLA
+        cin.get();/// DETIENE LA PANTALLA
 
-}}
+    }
+}
 
 void mostrar_menureservas()
 {
@@ -108,16 +106,22 @@ void mostrar_menureservas()
     cout<<"0 - SALIR"<<endl;
 }
 
-void CargarReserva (){
-Reserva r;
-ReservaArchivo ra;
+void CargarReserva ()
+{
+    Reserva r;
+    ReservaArchivo ra;
 /////FUNCION QUE CARGUE NUMERO DE RESERVA
 
-int nr;
-int dni;
-dni=ConsultaCliente ();
-r.Cargar(nr,dni);
-ra.guardar (r);
-nr++;
-}
+    int nr;
+    int dni,hab;
+    dni=ConsultaCliente ();
+    hab=consultaHabitacion();
+    r.Cargar(nr,dni,hab);
+    ra.guardar (r);
+    nr++;
 
+
+}
+void BuscarReserva (){}
+
+void CancelarReserva (){}

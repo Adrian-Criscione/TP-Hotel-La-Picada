@@ -110,14 +110,13 @@ void Reserva::setActivo(bool activo)
     _activo = activo;
 }
 
-void Reserva::Cargar(int numeroreserva, int dni)
+void Reserva::Cargar(int numeroreserva, int dni,int hab)
 {
     char op;
     int dia, mes, anio;
     _dniCliente=dni;
     _numeroreserva =numeroreserva;
-    cout<< "Ingrese el numero de habitacion: "<<endl;
-    cin>> _numerohabitacion;
+     _numerohabitacion=hab;
 
 //// funcion SERVICIOS TOTALES
 

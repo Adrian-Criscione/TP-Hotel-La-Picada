@@ -79,7 +79,20 @@ void MenuHabitacion ()
 
         case '5':
         {
-
+            Habitacion h;
+            HabitacionArchivo ha;
+            int pos=0;
+            pos=ha.getCantidad();
+            for (int i=0; i<pos; i++)
+            {
+                h=ha.leer(i);
+                if (h.getDisponible()==false)
+                {
+                    h.Mostrar();
+                    cout<< endl;
+                    cout<< "**"<<endl;
+                }
+            }
         }
         break;
 
@@ -166,7 +179,7 @@ void altaHabitacion ()
     }
 }
 
-void consultaHabitacion()
+int consultaHabitacion()
 {
     Habitacion ha;
     HabitacionArchivo har;
@@ -192,6 +205,7 @@ void consultaHabitacion()
             system("pause");
         }
     }
+    return numero;
 }
 
 void modificarDatosHabitacion()

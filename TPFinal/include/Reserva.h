@@ -41,7 +41,7 @@ public:
     void setMonto (float monto);
     void setAbonado (bool abonado);
     void setActivo (bool activo);
-    void Cargar(int numeroreserva, int dni);
+    void Cargar(int numeroreserva, int dni,int habitacion);
     void Mostrar();
 };
 
