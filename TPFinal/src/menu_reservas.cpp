@@ -52,23 +52,31 @@ void MenuReservas ()
         break;
         case '4':
         {
-            cout<< "/-*";
             Reserva r;
             ReservaArchivo ra;
             int pos=0;
             pos=ra.getCantidad();
-            cout<<endl<<pos;
-            for (int i=0; i<pos; i++)
+                cls();
+            if (pos==0)
             {
-                r=ra.leer(i);
-
-                if (r.getActivo()==true)
-                {
-                    r.Mostrar();
-                    cout<< "**"<<endl;
-                    cout<< endl;
-                }
+                 gotoxy(50,12);
+                cout<< "***************************"<<endl;
+                 gotoxy(50,13);
+                cout<< "NO HAY RESERVAS ACTIVAS AUN"<<endl;
+                 gotoxy(50,14);
+                cout<< "***************************"<<endl;
             }
+             for (int i=0; i<pos; i++)
+              {
+                  r=ra.leer(i);
+                  if (r.getActivo()==true)
+                  {
+                      cout<< "****************"<<endl;
+                      r.Mostrar();
+                      cout<< "****************"<<endl;
+                      cout<< endl;
+                   }
+              }
 
         }
         break;
@@ -223,6 +231,7 @@ void BuscarReservaPorNumeroReserva ()
     cout<< "INGRESE EL NUMERO DE RESERVA: ";
     cin>>num;
     pos=ra.buscar(num);
+
     if(pos<0)
     {
         cout<<"EL NUMERO DE RESERVA NO ESTA REGISTRADA"<<endl;
@@ -233,8 +242,10 @@ void BuscarReservaPorNumeroReserva ()
         r=ra.leer(pos);
         if(r.getActivo())
         {
+            cout<<"*****************************"<<endl;
             r.Mostrar();
-            system("pause");
+            cout<<"*****************************"<<endl<<endl;
+           system("pause");
         }
         else
         {
@@ -263,11 +274,11 @@ void BuscarReservaPorNumeroDni ()
         {
             if(r.getDniCliente()==dni)
             {
-        cout<<"*/*/*/*/*/*/*/*/*/*/*"<<endl;
-        r.Mostrar();
-        cout<<"*/*/*/*/*/*/*/*/*/*/*"<<endl;
-        cin.get();
-        noreserva=false;
+                cout<<"*/*/*/*/*/*/*/*/*/*/*"<<endl;
+                r.Mostrar();
+                cout<<"*/*/*/*/*/*/*/*/*/*/*"<<endl;
+                cin.get();
+                noreserva=false;
             }
         }
 
@@ -280,7 +291,8 @@ void BuscarReservaPorNumeroDni ()
 
 }
 
-void BuscarReservaPorNumeroHabitacion () {
+void BuscarReservaPorNumeroHabitacion ()
+{
 
     Reserva r;
     ReservaArchivo ra;
@@ -296,9 +308,11 @@ void BuscarReservaPorNumeroHabitacion () {
         {
             if(r.getNumeroHabitacion()==hab)
             {
-        r.Mostrar();
-        cin.get();
-        noreserva=false;
+                cout<<"/////////////////////"<<endl;
+                r.Mostrar();
+                cout<<"/////////////////////"<<endl;
+                cin.get();
+                noreserva=false;
             }
         }
 

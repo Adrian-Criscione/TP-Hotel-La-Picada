@@ -27,7 +27,6 @@ bool ClienteArchivo::guardar(Cliente cl)
     return ok;
 }
 
-
 bool ClienteArchivo::guardar(Cliente cl, int nroRegistro)
 {
     FILE* p = fopen("cliente.dat", "rb+");
