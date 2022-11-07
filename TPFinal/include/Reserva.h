@@ -12,9 +12,9 @@ private:
     int _dniCliente;
     int _numerohabitacion;
     int _codigoServicio;
-    char _medioDePago [50];
+    int _medioDePago;
     Fecha _fechaReserva;
-    char _canalDeReserva [50];
+    int _canalDeReserva;
     float _monto;
     bool _abonado;
     bool _activo;
@@ -25,9 +25,9 @@ public:
     int getNumeroHabitacion ();
 
     int getCodigoServicio ();
-    string getMedioDePago ();
+    int getMedioDePago ();
     Fecha getFechaReserva ();
-    string getCanalDeReserva ();
+    int getCanalDeReserva ();
     float getMonto();
     bool getAbonado ();
     bool getActivo ();
@@ -35,9 +35,9 @@ public:
     void setDniCliente (int dniCliente);
     void setNumeroHabitacion (int numerohabitacion);
     void setCodigoServicio (int codigoServicio);
-    void setMedioDePago (string medioDePago);
+    void setMedioDePago (int medioDePago);
     void setFechaReserva (Fecha fechaReserva);
-    void setCanalDeReserva (string canalDeReserva);
+    void setCanalDeReserva (int canalDeReserva);
     void setMonto (float monto);
     void setAbonado (bool abonado);
     void setActivo (bool activo);

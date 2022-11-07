@@ -70,8 +70,6 @@ int ClienteArchivo::buscar(int dni)
     return -1;
 }
 
-
-
 bool ClienteArchivo::ModificarArchivo(int pos, Cliente cl)
 
 {

@@ -22,7 +22,7 @@ class Comidas
         void setNumComida(int numComida);
         void setPrecio(float precio);
         void setDisponible(bool disponible);
-        void cargar(int id);
+        void cargar();
         void mostrar();
 };
 

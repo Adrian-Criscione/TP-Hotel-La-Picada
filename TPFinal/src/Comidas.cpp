@@ -36,16 +36,43 @@ void Comidas::setDisponible(bool disponible){
     _disponible = disponible;
 }
 
-void Comidas::cargar(int id){
-    _idComida = id;
-    cout<<"INGRESE PRECIO DE LA COMIDA: "<<endl;
-    cin>>_precio;
+
+void Comidas::cargar(){
+    ComidasArchivo ca;
+    _idComida= ca.getCantidad()+1;
+    cout<< "SELECCION EL TIPO DE SERVICIOS A BRINDAR:"<<endl;
+    cout<< "1) SIN SERVICIO  2)DESAYUNO  3)MEDIA PENSION  4)ALL INCLUSIVE"<<endl;
+    cin>> _numComida;
+  switch (_numComida)
+  {case '1':
+      {_precio=0;}
+     break;
+ case '2':
+    {
+        _precio=100;
+    }
+    break;
+     case '3':
+    {
+        _precio=200;
+    }
+    break;
+     case '4':
+    {
+        _precio=500;
+    }
+    break;
+
+        }
     _disponible = true;
 
 }
 
 void Comidas::mostrar(){
     cout<<"CODIGO IDENTIFICADOR DE COMIDA: "<<_idComida<<endl;
+    cout<< "INGRESE LA OPCION DE SERVICIO DE COMIDAS: "<<endl;
+
+
     cout<<"PRECIO: "<<_precio<<endl;
     cout<<"DISPONIBLE: "<<_disponible<<endl;
 }

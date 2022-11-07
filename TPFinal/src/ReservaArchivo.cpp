@@ -45,14 +45,14 @@ int ReservaArchivo::getCantidad() {
   return cant;
 }
 
-/*int ReservaArchivo::buscar(int numero) {
+int ReservaArchivo::buscar(int numero) {
   int cant = getCantidad();
   Reserva r;
   for (int i = 0; i < cant; i++) {
     r = leer(i);
-    if (r.getNumero() == numero) {
+    if (r.getNumeroReserva() == numero) {
       return i;
     }
   }
   return -1;
-}*/
+}
