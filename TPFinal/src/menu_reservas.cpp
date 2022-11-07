@@ -263,7 +263,9 @@ void BuscarReservaPorNumeroDni ()
         {
             if(r.getDniCliente()==dni)
             {
+        cout<<"*/*/*/*/*/*/*/*/*/*/*"<<endl;
         r.Mostrar();
+        cout<<"*/*/*/*/*/*/*/*/*/*/*"<<endl;
         cin.get();
         noreserva=false;
             }
