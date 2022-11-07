@@ -29,8 +29,10 @@ void mostrar_menucliente()
     gotoxy(50,14);
     cout<<"4 - DAR DE BAJA A UN CLIENTE"<<endl;
     gotoxy(50,15);
-    cout<<"---------------------"<<endl;
+    cout<<"5 - LISTADO DE CLIENTES"<<endl;
     gotoxy(50,16);
+    cout<<"---------------------"<<endl;
+    gotoxy(50,17);
     setColor(YELLOW);
     cout<<"0 - VOLVER AL MENU PRINCIPAL"<<endl;
 }
