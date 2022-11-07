@@ -193,7 +193,6 @@ void BuscarReserva ()
 
 }
 
-
 void mostrar_menubuscarreservas()
 {
     gotoxy(50,9);
@@ -278,7 +277,37 @@ void BuscarReservaPorNumeroDni ()
     }
 
 }
-void BuscarReservaPorNumeroHabitacion () {}
+
+void BuscarReservaPorNumeroHabitacion () {
+
+    Reserva r;
+    ReservaArchivo ra;
+    int hab;
+    cout<< "INGRE NUMERO HABITACION PARA BUSCAR RESERVA: ";
+    cin>>hab;
+    int cant=ra.getCantidad();
+    bool noreserva=true;
+    for (int i=0; i<cant; i++)
+    {
+        r=ra.leer(i);
+        if (r.getActivo())
+        {
+            if(r.getNumeroHabitacion()==hab)
+            {
+        r.Mostrar();
+        cin.get();
+        noreserva=false;
+            }
+        }
+
+    }
+    if (noreserva)
+    {
+        cout<< "LA HABITACION NO TIENE RESERVAS ACTIVAS"<<endl;
+        cin.get();
+    }
+
+}
 
 void CancelarReserva ()
 {

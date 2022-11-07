@@ -7,6 +7,7 @@
 using namespace std;
 using namespace rlutil;
 
+
 int Reserva::getNumeroReserva()
 {
 
@@ -16,6 +17,10 @@ int Reserva::getDniCliente()
 {
 
     return _dniCliente;
+}
+int Reserva::getNumeroHabitacion ()
+{
+    return _numerohabitacion;
 }
 
 int Reserva::getCodigoServicio()
