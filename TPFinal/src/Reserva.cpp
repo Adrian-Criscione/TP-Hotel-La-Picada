@@ -137,7 +137,7 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
 
 //// FUNCION PARA CALCULAR TOTAL DE RESERVA
 
-    cout<<"La reserva fue abonada? s/n: ";
+   cout<<"La reserva fue abonada? s/n: ";
     cin.get(op);
     cin.ignore();
     switch (op)

@@ -50,20 +50,20 @@ void MenuReservas ()
             CancelarReserva ();
         }
         break;
-        case '5':
+        case '4':
         {
+            cout<< "/-*";
             Reserva r;
             ReservaArchivo ra;
             int pos=0;
             pos=ra.getCantidad();
-
+            cout<<endl<<pos;
             for (int i=0; i<pos; i++)
             {
                 r=ra.leer(i);
 
-                if (r.getActivo())
+                if (r.getActivo()==true)
                 {
-
                     r.Mostrar();
                     cout<< "**"<<endl;
                     cout<< endl;
@@ -72,6 +72,7 @@ void MenuReservas ()
 
         }
         break;
+
         case '0':
         {
             setBackgroundColor(BLACK);
@@ -106,8 +107,10 @@ void mostrar_menureservas()
     gotoxy(50,13);
     cout<<"3 - CANCELAR RESERVA"<<endl;
     gotoxy(50,14);
-    cout<<"---------------------"<<endl;
+    cout<< "4 - MOSTRAR RESERVAS ACTIVAS"<<endl;
     gotoxy(50,15);
+    cout<<"---------------------"<<endl;
+    gotoxy(50,16);
     setColor(YELLOW);
     cout<<"0 - SALIR"<<endl;
 }
@@ -126,14 +129,11 @@ void CargarReserva ()
         return;
     r.Cargar(nr,dni,hab);
     ra.guardar (r);
-    nr++;
-
 
 }
 
 void BuscarReserva ()
 {
-
     Reserva r;
     ReservaArchivo ra;
     bool salir=false;
@@ -256,12 +256,7 @@ void BuscarReservaPorNumeroDni ()
     cout<< "INGRE NUMERO DNI DEL CLIENTE PARA BUSCAR RESERVA: ";
     cin>>dni;
     int cant=ra.getCantidad();
-    Reserva *reservavec;
-    reservavec= new Reserva [cant];
-    if (reservavec==nullptr)
-    {
-        return;
-    }
+    bool noreserva=true;
     for (int i=0; i<cant; i++)
     {
         r=ra.leer(i);
@@ -269,19 +264,19 @@ void BuscarReservaPorNumeroDni ()
         {
             if(r.getDniCliente()==dni)
             {
-
-                reservavec[i]=r;
+        r.Mostrar();
+        cin.get();
+        noreserva=false;
             }
         }
-    }
-    for (int i=0; i<cant; i++)
-    {
-        reservavec[i].Mostrar();
-        cout<<endl;
-        cin.get();
 
     }
-    delete reservavec;
+    if (noreserva)
+    {
+        cout<< "EL CLIENTE NO TIENE RESERVAS ACTIVAS"<<endl;
+        cin.get();
+    }
+
 }
 void BuscarReservaPorNumeroHabitacion () {}
 

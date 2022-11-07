@@ -37,7 +37,7 @@ void Comidas::setDisponible(bool disponible){
 }
 
 
-void Comidas::cargar(){
+int Comidas::cargar(){
     ComidasArchivo ca;
     _idComida= ca.getCantidad()+1;
     cout<< "SELECCION EL TIPO DE SERVICIOS A BRINDAR:"<<endl;
@@ -65,7 +65,7 @@ void Comidas::cargar(){
 
         }
     _disponible = true;
-
+    return _idComida;
 }
 
 void Comidas::mostrar(){
