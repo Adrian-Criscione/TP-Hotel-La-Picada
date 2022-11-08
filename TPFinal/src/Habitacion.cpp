@@ -60,5 +60,8 @@ void Habitacion::Mostrar()
 {
     cout<<_numero<<"  "<<"Tipo de habitacion: "<<_tipoHabitacion<<endl;
     cout<<"Precio X noche: "<<_precio<<endl;
-    cout<<"Disponible: "<<_disponible<<endl;
+    cout<<"Disponible: ";
+    if (_disponible==true)
+        {cout<< "si"<<endl;}
+    else{cout<< "no"<<endl;}
 }

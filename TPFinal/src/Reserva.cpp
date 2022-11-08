@@ -1,10 +1,12 @@
 #include <iostream>
 #include "Reserva.h"
+#include "Servicio.h"
 #include "Fecha.h"
 #include "rlutil.h"
 
 using namespace std;
 using namespace rlutil;
+
 
 int Reserva::getNumeroReserva()
 {
@@ -16,37 +18,35 @@ int Reserva::getDniCliente()
 
     return _dniCliente;
 }
-
+int Reserva::getNumeroHabitacion ()
+{
+    return _numerohabitacion;
+}
 int Reserva::getCodigoServicio()
 {
 
     return _codigoServicio;
 }
-
-string Reserva::getMedioDePago()
+int Reserva::getMedioDePago()
 {
 
     return _medioDePago;
 }
-
 Fecha Reserva::getFechaReserva()
 {
 
     return _fechaReserva;
 }
-
-string Reserva::getCanalDeReserva()
+int Reserva::getCanalDeReserva()
 {
 
     return _canalDeReserva;
 }
-
 float Reserva::getMonto()
 {
 
     return _monto;
 }
-
 bool Reserva::getAbonado()
 {
 
@@ -59,51 +59,40 @@ bool Reserva::getActivo()
 }
 void Reserva::setNumeroReserva (int numeroreserva)
 {
-
     _numeroreserva=numeroreserva;
 }
 void Reserva::setDniCliente(int dni)
 {
-
     _dniCliente=dni;
 }
-
 void Reserva::setCodigoServicio(int codigoServicio)
 {
-
     _codigoServicio=codigoServicio;
 }
-
-void Reserva::setMedioDePago(string medioDePago)
+void Reserva::setMedioDePago(int medioDePago)
 {
-
-    strcpy(_medioDePago,medioDePago.c_str());
+    _medioDePago=medioDePago;
 }
-
 void Reserva::setFechaReserva(Fecha fechaReserva)
 {
 
     _fechaReserva = fechaReserva;
 }
-
-void Reserva::setCanalDeReserva(string canalDeReserva)
+void Reserva::setCanalDeReserva(int canalDeReserva)
 {
 
-    strcpy(_canalDeReserva,canalDeReserva.c_str());
+    _canalDeReserva=canalDeReserva;
 }
-
 void Reserva::setMonto(float monto)
 {
 
     _monto = monto;
 }
-
 void Reserva::setAbonado(bool abonado)
 {
 
     _abonado = abonado;
 }
-
 void Reserva::setActivo(bool activo)
 {
 
@@ -114,32 +103,32 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
 {
     char op;
     int dia, mes, anio;
-    _dniCliente=dni;
     _numeroreserva =numeroreserva;
-     _numerohabitacion=hab;
-
-//// funcion SERVICIOS TOTALES
-
-
+    _dniCliente=dni;
+    _numerohabitacion=hab;
+    Servicio ser;
+    ser.Cargar(numeroreserva);
     cout<< "Ingrese el Medio de Pago: "<<endl;
+    cout<< "1)Efectivo 2)Tarjeta 3)Mercado Pago "<<endl;
     cin>> _medioDePago;
-    cout<<"Ingrese dia de comienzo reserva: "<<endl;
+    cout<<"Ingrese fecha de comienzo reserva: ";
     cin>>dia;
-    _fechaReserva.setDia(dia);
-    cout<<"Ingrese mes de comienzo reserva: "<<endl;
+    cout<<"/";
     cin>>mes;
-    _fechaReserva.setMes(mes);
-    cout<<"Ingrese anio de comienzo reserva: "<<endl;
+    cout<<"/";
     cin>>anio;
+    Fecha(dia,mes,anio);
+    cout<<endl;
     _fechaReserva.setAnio(anio);
     cout<< "Ingrese Canal de Reserva: "<<endl;
+    cout<< "1) Pagina Web 2) Booking 3) Almundo 4) Despegar"<<endl;
     cin>> _canalDeReserva;
 
 //// FUNCION PARA CALCULAR TOTAL DE RESERVA
 
     cout<<"La reserva fue abonada? s/n: ";
-    cin.get(op);
     cin.ignore();
+    cin.get(op);
     switch (op)
     {
     case 's':
@@ -154,35 +143,34 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
         _abonado=false;
     }
     break;
-    /*
-    default:
-    {
-        gotoxy(50,17);
-        setColor(YELLOW);
-        cls();
-        cout<<"OPCION INCORRECTA!!!"<<endl;
-        cin.get();
-
 
     }
-    break;
-*/
-    }
+    _monto+=ser.getPrecio();
     _activo=true;
 }
 
-void Reserva::Mostrar() {
+void Reserva::Mostrar()
+{
 
     cout<< "NUMERO RESERVA "<< _numeroreserva<<endl;
     cout<< "DNI CLIENTE "<< _dniCliente<<endl;
     cout<< "NUMERO HABITACION "<< _numerohabitacion<<endl;
     cout<< "CODIGO SERVICIO "<< _codigoServicio<<endl;
     cout<< "MEDIO PAGO "<< _medioDePago<<endl ;
-///    cout<< "FECHA " <<_fechaReserva<<endl;
+    cout<< "FECHA " <<_fechaReserva.toString()<<endl;
     cout<< "CANAL RESERVA "<< _canalDeReserva<<endl;
     cout<< "MONTO "<< _monto<<endl;
-    cout<< "ABONADO "<< _abonado<<endl;
-    cout<< "ACTIVO "<< _activo<<endl;
+    cout<< "ABONADO ";
+    if (_abonado==true)
+    {
+        cout<< "SI"<<endl;
+    }
+    else
+    {
+        cout<< "NO"<<endl;
+    }
+
+    /// cout<< "ACTIVO "<< _activo<<endl;
 
 }
 

@@ -24,7 +24,7 @@ public:
         void setExcursiones (int);
         void setPrecio (float);
         void setActivo (bool);
-        void Cargar();
+        void Cargar(int codigoservicio);
         void Mostrar();
 
 

@@ -17,7 +17,13 @@ void MenuReservas ();
 void mostrar_menureservas();
 void CargarReserva();
 void BuscarReserva ();
+void mostrar_menubuscarreservas();
+void BuscarReservaPorNumeroReserva ();
+void BuscarReservaPorNumeroDni ();
+void BuscarReservaPorNumeroHabitacion ();
+
 void CancelarReserva ();
+
 ////////////////////
 ///MENU CLIENTE
 ///////////////////

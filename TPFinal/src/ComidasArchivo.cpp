@@ -70,8 +70,6 @@ int ComidasArchivo::buscar(int numComida)
     return -1;
 }
 
-
-
 bool ComidasArchivo::ModificarArchivo(int pos, Comidas co)
 
 {
