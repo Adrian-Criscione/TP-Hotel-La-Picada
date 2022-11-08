@@ -11,7 +11,7 @@ private:
     int _numeroreserva;
     int _dniCliente;
     int _numerohabitacion;
-    int _codigoServicio;
+    int _codigoComida;
     int _medioDePago;
     Fecha _fechaComienzo;
     Fecha _fechaFin;
@@ -26,7 +26,12 @@ public:
     int getNumeroReserva ();
     int getDniCliente ();
     int getNumeroHabitacion ();
+<<<<<<< HEAD
     int getCodigoServicio ();
+=======
+
+    int getCodigoComida ();
+>>>>>>> 6c3e4398519c849aa496e633076a72a07c053d3c
     int getMedioDePago ();
     Fecha getFechaComienzo ();
     Fecha getFechaFin ();
@@ -40,7 +45,7 @@ public:
     void setNumeroReserva (int numeroreserva);
     void setDniCliente (int dniCliente);
     void setNumeroHabitacion (int numerohabitacion);
-    void setCodigoServicio (int codigoServicio);
+    void setCodigoComida (int codigoComida);
     void setMedioDePago (int medioDePago);
     void setFechaComienzo (Fecha fechaReserva);
     void setFechaFin (Fecha fechaReserva);

@@ -2,6 +2,7 @@
 #include "Reserva.h"
 #include "Servicio.h"
 #include "Fecha.h"
+#include "Comidas.h"
 #include "rlutil.h"
 
 using namespace std;
@@ -22,10 +23,10 @@ int Reserva::getNumeroHabitacion ()
 {
     return _numerohabitacion;
 }
-int Reserva::getCodigoServicio()
+int Reserva::getCodigoComida()
 {
 
-    return _codigoServicio;
+    return _codigoComida;
 }
 int Reserva::getMedioDePago()
 {
@@ -81,9 +82,9 @@ void Reserva::setDniCliente(int dni)
 {
     _dniCliente=dni;
 }
-void Reserva::setCodigoServicio(int codigoServicio)
+void Reserva::setCodigoComida(int codigoComida)
 {
-    _codigoServicio=codigoServicio;
+    _codigoComida=codigoComida;
 }
 void Reserva::setMedioDePago(int medioDePago)
 {
@@ -140,8 +141,8 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     _numeroreserva =numeroreserva;
     _dniCliente=dni;
     _numerohabitacion=hab;
-    Servicio ser;
-    ser.Cargar(numeroreserva);
+    Comidas com;
+    _codigoComida=com.cargar();
     cout<< "Ingrese el Medio de Pago: "<<endl;
     cout<< "1)Efectivo 2)Tarjeta 3)Mercado Pago "<<endl;
     cin>> _medioDePago;
@@ -211,7 +212,7 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     break;
 
     }
-    _monto+=ser.getPrecio();
+    _monto+=com.getPrecio();
     _activo=true;
 }
 
@@ -221,7 +222,7 @@ void Reserva::Mostrar()
     cout<< "NUMERO RESERVA "<< _numeroreserva<<endl;
     cout<< "DNI CLIENTE "<< _dniCliente<<endl;
     cout<< "NUMERO HABITACION "<< _numerohabitacion<<endl;
-    cout<< "CODIGO SERVICIO "<< _codigoServicio<<endl;
+    cout<< "CODIGO COMIDA "<< _codigoComida<<endl;
     cout<< "MEDIO PAGO "<< _medioDePago<<endl ;
     cout<< "FECHA COMIENZO RESERVA: " <<_fechaComienzo.toString()<<endl;
     cout<< "FECHA FIN DE RESERVA: " <<_fechaFin.toString()<<endl;
