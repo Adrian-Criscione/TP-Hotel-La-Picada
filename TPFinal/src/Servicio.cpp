@@ -1,5 +1,4 @@
 #include "Servicio.h"
-#include "ComidasArchivo.h"
 #include <iostream>
 
 using namespace std;
@@ -50,17 +49,11 @@ void Servicio::Cargar(int codigoservicio)
 {
    _codigoServicio=codigoservicio;
     cout<<endl;
-    Comidas com;
-    ComidasArchivo comar;
-    com.cargar ();
-    comar.guardar(com);
-    _comida=(com.getIdComida());
-    cout<<endl;
-    cout << "Ingrese el Codigo de Excursiones"<<endl;
+       cout << "Ingrese el Codigo de Excursiones"<<endl;
     cin>> _excursiones;
     cout<<endl;
-     _precio=com.getPrecio();
-    _activo=true;
+     ///_precio
+         _activo=true;
 }
 
 void Servicio::Mostrar ()

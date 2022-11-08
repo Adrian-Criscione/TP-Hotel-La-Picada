@@ -32,15 +32,31 @@ int Reserva::getMedioDePago()
 
     return _medioDePago;
 }
-Fecha Reserva::getFechaReserva()
+Fecha Reserva::getFechaComienzo()
 {
 
-    return _fechaReserva;
+    return _fechaComienzo;
 }
+Fecha Reserva::getFechaFin()
+{
+
+    return _fechaFin;
+}
+int Reserva::getDiasReserva ()
+{
+
+    return _diasreserva;
+}
+
 int Reserva::getCanalDeReserva()
 {
 
     return _canalDeReserva;
+}
+int Reserva::getnumComida()
+{
+
+    return _numComida;
 }
 float Reserva::getMonto()
 {
@@ -73,16 +89,34 @@ void Reserva::setMedioDePago(int medioDePago)
 {
     _medioDePago=medioDePago;
 }
-void Reserva::setFechaReserva(Fecha fechaReserva)
+void Reserva::setFechaComienzo(Fecha fechaReserva)
 {
 
-    _fechaReserva = fechaReserva;
+    _fechaComienzo = fechaReserva;
 }
+void Reserva::setFechaFin(Fecha fechaReserva)
+{
+
+    _fechaFin = fechaReserva;
+}
+
+void Reserva::setDiasReservas (int cantidaddias)
+{
+    _diasreserva=cantidaddias;
+}
+
 void Reserva::setCanalDeReserva(int canalDeReserva)
 {
 
     _canalDeReserva=canalDeReserva;
 }
+void Reserva::setNumComida(int numcomida)
+{
+
+    _numComida=numcomida;
+}
+
+
 void Reserva::setMonto(float monto)
 {
 
@@ -101,7 +135,7 @@ void Reserva::setActivo(bool activo)
 
 void Reserva::Cargar(int numeroreserva, int dni,int hab)
 {
-    char op;
+    char op,pago;
     int dia, mes, anio;
     _numeroreserva =numeroreserva;
     _dniCliente=dni;
@@ -111,25 +145,57 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     cout<< "Ingrese el Medio de Pago: "<<endl;
     cout<< "1)Efectivo 2)Tarjeta 3)Mercado Pago "<<endl;
     cin>> _medioDePago;
-    cout<<"Ingrese fecha de comienzo reserva: ";
+   /* cout<<"Ingrese fecha de comienzo reserva: "<<endl;
     cin>>dia;
-    cout<<"/";
     cin>>mes;
-    cout<<"/";
     cin>>anio;
     Fecha(dia,mes,anio);
     cout<<endl;
-    _fechaReserva.setAnio(anio);
+    cout<<"Ingrese fecha de final de reserva: "<<endl;
+    cin>>dia;
+    cin>>mes;
+    cin>>anio;
+    setFechaFin(Fecha(dia,mes,anio));*/
+    cout<<endl;
+   /// _diasreserva=getFechaFin().getDia()-getFechaComienzo().getDia();
     cout<< "Ingrese Canal de Reserva: "<<endl;
     cout<< "1) Pagina Web 2) Booking 3) Almundo 4) Despegar"<<endl;
     cin>> _canalDeReserva;
+    cout<< "SELECCION EL TIPO DE SERVICIOS A BRINDAR:"<<endl;
+    cout<< "1) SIN SERVICIO  2)DESAYUNO  3)MEDIA PENSION  4)ALL INCLUSIVE"<<endl;
+    cin.ignore();
+    cin.get(op);
+    switch (op)
+    {
+    case '1':
+    {
+        _monto=0;
+    }
+    break;
+    case '2':
+    {
+        _monto=400;
+    }
+    break;
+    case '3':
+    {
+        _monto=800;
+    }
+    break;
+    case '4':
+    {
+        _monto=1800;
+    }
+    break;
+    }
+    _numComida=op;
 
 //// FUNCION PARA CALCULAR TOTAL DE RESERVA
 
     cout<<"La reserva fue abonada? s/n: ";
     cin.ignore();
-    cin.get(op);
-    switch (op)
+    cin.get(pago);
+    switch (pago)
     {
     case 's':
     case 'S':
@@ -157,7 +223,9 @@ void Reserva::Mostrar()
     cout<< "NUMERO HABITACION "<< _numerohabitacion<<endl;
     cout<< "CODIGO SERVICIO "<< _codigoServicio<<endl;
     cout<< "MEDIO PAGO "<< _medioDePago<<endl ;
-    cout<< "FECHA " <<_fechaReserva.toString()<<endl;
+    cout<< "FECHA COMIENZO RESERVA: " <<_fechaComienzo.toString()<<endl;
+    cout<< "FECHA FIN DE RESERVA: " <<_fechaFin.toString()<<endl;
+    cout<< "DIAS RESERVADOS: " <<_diasreserva<<endl;
     cout<< "CANAL RESERVA "<< _canalDeReserva<<endl;
     cout<< "MONTO "<< _monto<<endl;
     cout<< "ABONADO ";

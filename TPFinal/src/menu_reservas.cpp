@@ -56,27 +56,36 @@ void MenuReservas ()
             ReservaArchivo ra;
             int pos=0;
             pos=ra.getCantidad();
-                cls();
+            cls();
             if (pos==0)
             {
-                 gotoxy(50,12);
+                gotoxy(50,12);
                 cout<< "***************************"<<endl;
-                 gotoxy(50,13);
-                cout<< "NO HAY RESERVAS ACTIVAS AUN"<<endl;
-                 gotoxy(50,14);
+                gotoxy(50,13);
+                cout<< "NO HAY RESERVAS AUN"<<endl;
+                gotoxy(50,14);
                 cout<< "***************************"<<endl;
             }
-             for (int i=0; i<pos; i++)
-              {
-                  r=ra.leer(i);
-                  if (r.getActivo()==true)
-                  {
-                      cout<< "****************"<<endl;
-                      r.Mostrar();
-                      cout<< "****************"<<endl;
-                      cout<< endl;
-                   }
-              }
+            for (int i=0; i<pos; i++)
+            {
+                r=ra.leer(i);
+                if (r.getActivo()==true)
+                {
+                    cout<< "****************"<<endl;
+                    r.Mostrar();
+                    cout<< "****************"<<endl;
+                    cout<< endl;
+                }
+                else
+                {
+                    gotoxy(50,12);
+                    cout<< "***************************"<<endl;
+                    gotoxy(50,13);
+                    cout<< "NO HAY RESERVAS ACTIVAS AUN"<<endl;
+                    gotoxy(50,14);
+                    cout<< "***************************"<<endl;
+                }
+            }
 
         }
         break;
@@ -245,7 +254,7 @@ void BuscarReservaPorNumeroReserva ()
             cout<<"*****************************"<<endl;
             r.Mostrar();
             cout<<"*****************************"<<endl<<endl;
-           system("pause");
+            system("pause");
         }
         else
         {

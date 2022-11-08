@@ -100,7 +100,7 @@
 
 1666909341 c:\users\usuario\documents\github\tp-hotel-la-picada\tpfinal\include\menu_cliente.h
 
-1667517243 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\main.cpp
+1667852328 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\main.cpp
 	"Menu.h"
 	<iostream>
 
@@ -179,21 +179,20 @@
 	"rlutil.h"
 	"ClienteArchivo.h"
 
-1667844941 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
+1667950883 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
 	<iostream>
 	"Reserva.h"
 	"Servicio.h"
 	"Fecha.h"
 	"rlutil.h"
 
-1667507674 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
+1667950883 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
 	<cstring>
 	<iostream>
 	"Fecha.h"
 
-1667845938 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\servicio.cpp
+1667951414 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\servicio.cpp
 	"Servicio.h"
-	"ComidasArchivo.h"
 	<iostream>
 
 1667802281 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicio.h
@@ -330,7 +329,7 @@
 
 1667078357 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reservas.cpp
 
-1667843893 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_reservas.cpp
+1667868001 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\menu_reservas.cpp
 	<iostream>
 	<cstring>
 	"rlutil.h"
@@ -509,16 +508,13 @@
 
 1667172281 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\menu_habitacion.h
 
-1667845753 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\comidas.cpp
+1667852328 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\comidas.cpp
 	<cstring>
 	<iostream>
 	"Comidas.h"
 	"ComidasArchivo.h"
 
-1667802435 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\comidas.h
-	"Fecha.h"
-	<cstring>
-	<iostream>
+1667950553 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\comidas.h
 
 1667163231 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\comidasarchivo.h
 	"Comidas.h"
