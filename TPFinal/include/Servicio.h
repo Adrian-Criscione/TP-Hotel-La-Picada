@@ -26,7 +26,6 @@ public:
         void setActivo (bool);
         void Cargar(int codigoservicio);
         void Mostrar();
-
-
+        ////ESTO SE VA A GUARDAR EN LA RAMA DE PRUEBA/////
 };
 #endif // SERVICIO_H_INCLUDED
