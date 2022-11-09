@@ -2,7 +2,6 @@
 #include "Reserva.h"
 #include "Servicio.h"
 #include "Fecha.h"
-#include "Comidas.h"
 #include "rlutil.h"
 
 using namespace std;
@@ -54,11 +53,7 @@ int Reserva::getCanalDeReserva()
 
     return _canalDeReserva;
 }
-int Reserva::getnumComida()
-{
 
-    return _numComida;
-}
 float Reserva::getMonto()
 {
 
@@ -111,12 +106,6 @@ void Reserva::setCanalDeReserva(int canalDeReserva)
 
     _canalDeReserva=canalDeReserva;
 }
-void Reserva::setNumComida(int numcomida)
-{
-
-    _numComida=numcomida;
-}
-
 
 void Reserva::setMonto(float monto)
 {
@@ -141,9 +130,7 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     _numeroreserva =numeroreserva;
     _dniCliente=dni;
     _numerohabitacion=hab;
-    Comidas com;
-    _codigoComida=com.cargar();
-    cout<< "Ingrese el Medio de Pago: "<<endl;
+     cout<< "Ingrese el Medio de Pago: "<<endl;
     cout<< "1)Efectivo 2)Tarjeta 3)Mercado Pago "<<endl;
     cin>> _medioDePago;
    /* cout<<"Ingrese fecha de comienzo reserva: "<<endl;
@@ -189,7 +176,7 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     }
     break;
     }
-    _numComida=op;
+    _codigoComida=op;
 
 //// FUNCION PARA CALCULAR TOTAL DE RESERVA
 
@@ -212,7 +199,7 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     break;
 
     }
-    _monto+=com.getPrecio();
+  ///  _monto+=
     _activo=true;
 }
 

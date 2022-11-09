@@ -26,18 +26,13 @@ public:
     int getNumeroReserva ();
     int getDniCliente ();
     int getNumeroHabitacion ();
-<<<<<<< HEAD
     int getCodigoServicio ();
-=======
-
     int getCodigoComida ();
->>>>>>> 6c3e4398519c849aa496e633076a72a07c053d3c
     int getMedioDePago ();
     Fecha getFechaComienzo ();
     Fecha getFechaFin ();
     int getDiasReserva ();
     int getCanalDeReserva ();
-    int getnumComida ();
     float getMonto();
     bool getAbonado ();
     bool getActivo ();
@@ -51,7 +46,6 @@ public:
     void setFechaFin (Fecha fechaReserva);
     void setDiasReservas (int diasreserva);
     void setCanalDeReserva (int canalDeReserva);
-    void setNumComida (int numComida);
     void setMonto (float monto);
     void setAbonado (bool abonado);
     void setActivo (bool activo);
