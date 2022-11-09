@@ -2,7 +2,7 @@
 #include <cstring>
 #include "rlutil.h"
 #include "Menu.h"
-#include "Reserva.h"
+#include "HabitacionArchivo.h"
 #include "ReservaArchivo.h"
 
 using namespace std;
@@ -76,15 +76,6 @@ void MenuReservas ()
                     cout<< "****************"<<endl;
                     cout<< endl;
                 }
-                else
-                {
-                    gotoxy(50,12);
-                    cout<< "***************************"<<endl;
-                    gotoxy(50,13);
-                    cout<< "NO HAY RESERVAS ACTIVAS AUN"<<endl;
-                    gotoxy(50,14);
-                    cout<< "***************************"<<endl;
-                }
             }
 
         }
@@ -134,17 +125,24 @@ void mostrar_menureservas()
 
 void CargarReserva ()
 {
+    int dni;
+    dni=ConsultaCliente ();///analiza si esta en archivos el dni del cliente
+
+    HabitacionArchivo ha;
+    Habitacion h;
+    int numhab,cant,preciohab,pos;
+    numhab=consultaHabitacion(); ///analiza si esta en archivos la habitacion
+    pos=ha.buscar(numhab);
+    h=ha.leer(pos);
+    preciohab= h.getPrecio();
+    h.setActiva(false);
+    ha.guardar(h,pos);
+
+
     Reserva r;
     ReservaArchivo ra;
     int nr=ra.getCantidad()+1;///carga el numero de reserva segun la cantidad de registros de reservas q haya +1
-    int dni,hab;
-    dni=ConsultaCliente ();///analiza si esta en archivos el dni del cliente
-    if (dni==0)
-        return;
-    hab=consultaHabitacion(); ///analiza si esta en archivos la habitacion
-    if (hab==0)
-        return;
-    r.Cargar(nr,dni,hab);
+    r.Cargar(nr,dni,numhab,preciohab);
     ra.guardar (r);
 
 }
@@ -338,9 +336,11 @@ void CancelarReserva ()
 {
     Reserva r;
     ReservaArchivo ra;
+    HabitacionArchivo ha;
+    Habitacion h;
     cls();
 
-    int num,pos;
+    int num,pos,reg;
     cout<< "INGRESE EL NUMERO DE RESERVA QUE DESEA CANCELAR: ";
     cin>>num;
     pos=ra.buscar(num);
@@ -355,7 +355,13 @@ void CancelarReserva ()
         if(r.getActivo())
         {
             r.setActivo(false);
+
+            reg=ha.buscar(r.getNumeroHabitacion());
+            h=ha.leer(reg);
+            h.setActiva (true);
+            ha.guardar(h,reg);
             ra.guardar(r,pos);
+
             cout<< "LA RESERVA HA SIDO CANCELADA"<<endl;
             system("pause");
 

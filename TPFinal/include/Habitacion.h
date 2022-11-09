@@ -11,17 +11,17 @@ private:
     int _numero;
     float _precio;
     int _tipoHabitacion;
-    bool _disponible;
+    bool _activa;
 public:
     int getNumero();
     float getPrecio ();
     int getTipoHabitacion();
-    bool getDisponible ();
+    bool getActiva ();
     void setNumero (int);
     void setDniCliente (int);
     void setPrecio (float);
     void setTipoHabitacion(int);
-    void setDisponible (bool);
+    void setActiva (bool);
     void Cargar(int numero);
     void Mostrar();
 };

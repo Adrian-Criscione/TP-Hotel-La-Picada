@@ -55,6 +55,11 @@ int ClienteArchivo::getCantidad()
 
 int ClienteArchivo::buscar(int dni)
 {
+    if (dni==0)
+    {
+        return-1;
+    }
+
     int cant = getCantidad();
     Cliente cl;
     for (int i = 0; i < cant; i++)

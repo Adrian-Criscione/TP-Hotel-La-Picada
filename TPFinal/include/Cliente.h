@@ -7,6 +7,16 @@ using namespace std;
 
 class Cliente
 {
+
+private:
+    int _dni;
+    char _nombre [50];
+    char _apellido [50];
+    int _edad;
+    char _mail[50];
+    Fecha _fechaNacimiento;
+    bool _activo;
+
 public:
     int getDni ();
     string getNombre ();
@@ -27,15 +37,6 @@ public:
     void Mostrar();
 
 
-
-private:
-    int _dni;
-    char _nombre [50];
-    char _apellido [50];
-    int _edad;
-    char _mail[50];
-    Fecha _fechaNacimiento;
-    bool _activo;
 
 };
 

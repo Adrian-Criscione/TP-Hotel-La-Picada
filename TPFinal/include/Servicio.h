@@ -4,7 +4,11 @@
 #include <iostream>
 
 using namespace std;
+<<<<<<< Updated upstream
 ////SIGO MODIFICANDO EL .H////
+=======
+
+>>>>>>> Stashed changes
 class Servicio
 {
 private:
@@ -27,6 +31,7 @@ public:
         void Cargar(int codigoservicio);
         void Mostrar();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 =======
@@ -36,6 +41,9 @@ public:
 =======
         ///////ESPERO QUE FUNCIONE!!!
 >>>>>>> 94e5ec1190fed029e08efc126ddf7b737f986f27
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 };
 #endif // SERVICIO_H_INCLUDED

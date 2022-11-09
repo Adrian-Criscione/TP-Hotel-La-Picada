@@ -17,7 +17,7 @@ private:
     Fecha _fechaFin;
     int _diasreserva;
     int _canalDeReserva;
-    int _numComida;
+    int _huespedes;
     float _monto;
     bool _abonado;
     bool _activo;
@@ -33,6 +33,7 @@ public:
     Fecha getFechaFin ();
     int getDiasReserva ();
     int getCanalDeReserva ();
+    int getHuespedes ();
     float getMonto();
     bool getAbonado ();
     bool getActivo ();
@@ -46,10 +47,11 @@ public:
     void setFechaFin (Fecha fechaReserva);
     void setDiasReservas (int diasreserva);
     void setCanalDeReserva (int canalDeReserva);
+    void setHuespedes (int huespedes);
     void setMonto (float monto);
     void setAbonado (bool abonado);
     void setActivo (bool activo);
-    void Cargar(int numeroreserva, int dni,int habitacion);
+    void Cargar(int numeroreserva, int dni,int habitacion,int precio);
     void Mostrar();
 };
 

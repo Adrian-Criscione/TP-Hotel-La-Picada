@@ -53,6 +53,11 @@ int Reserva::getCanalDeReserva()
 
     return _canalDeReserva;
 }
+int Reserva::getHuespedes()
+{
+
+    return _huespedes;
+}
 
 float Reserva::getMonto()
 {
@@ -106,6 +111,11 @@ void Reserva::setCanalDeReserva(int canalDeReserva)
 
     _canalDeReserva=canalDeReserva;
 }
+void Reserva::setHuespedes(int huespedes)
+{
+
+    _huespedes=huespedes;
+}
 
 void Reserva::setMonto(float monto)
 {
@@ -123,16 +133,21 @@ void Reserva::setActivo(bool activo)
     _activo = activo;
 }
 
-void Reserva::Cargar(int numeroreserva, int dni,int hab)
+void Reserva::Cargar(int numeroreserva, int dni,int hab, int preciohab)
 {
     char op,pago;
-    int dia, mes, anio;
+    int dia, mes, anio,precioxdia;
     _numeroreserva =numeroreserva;
     _dniCliente=dni;
     _numerohabitacion=hab;
      cout<< "Ingrese el Medio de Pago: "<<endl;
     cout<< "1)Efectivo 2)Tarjeta 3)Mercado Pago "<<endl;
     cin>> _medioDePago;
+<<<<<<< Updated upstream
+=======
+    cout<< "INGRESE LA CANTIDAD DE HUESPEDES: ";
+    cin>> _huespedes;
+>>>>>>> Stashed changes
     cout<<"Ingrese fecha de comienzo reserva: "<<endl;
     cin>>dia;
     cin>>mes;
@@ -145,7 +160,11 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     cin>>anio;
     setFechaFin(Fecha(dia,mes,anio));
     cout<<endl;
+<<<<<<< Updated upstream
    diasreserva=(getFechaFin().getDia()-getFechaComienzo().getDia())-1;
+=======
+    _diasreserva=(getFechaFin().getDia()-getFechaComienzo().getDia())-1;
+>>>>>>> Stashed changes
     cout<< "Ingrese Canal de Reserva: "<<endl;
     cout<< "1) Pagina Web 2) Booking 3) Almundo 4) Despegar"<<endl;
     cin>> _canalDeReserva;
@@ -157,22 +176,22 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     {
     case '1':
     {
-        _monto=0;
+        precioxdia=0;
     }
     break;
     case '2':
     {
-        _monto=400;
+        precioxdia=(400*_huespedes);
     }
     break;
     case '3':
     {
-        _monto=800;
+        precioxdia=(800*_huespedes);
     }
     break;
     case '4':
     {
-        _monto=1800;
+        precioxdia=(1800*_huespedes);
     }
     break;
     }
@@ -199,7 +218,8 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
     break;
 
     }
-  ///  _monto+=
+
+    _monto=(_diasreserva*precioxdia)+(preciohab*_diasreserva);
     _activo=true;
 }
 

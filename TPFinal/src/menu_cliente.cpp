@@ -82,6 +82,7 @@ void MenuCliente ()
         break;
         case '5':
         {
+            cls ();
             Cliente cl;
             ClienteArchivo ca;
             int pos=0;
@@ -125,6 +126,10 @@ void altaCliente ()
     int dni, pos;
     cout<<"CARGUE NUMERO DE DNI DEL CLIENTE: ";
     cin>>dni;
+    if (dni==0)
+    {
+        return;
+    }
     pos=ca.buscar(dni);
     if(pos>=0)
     {
@@ -205,7 +210,7 @@ void altaCliente ()
 
         default:
         {
-           msjerror ();
+            msjerror ();
         }
 
 

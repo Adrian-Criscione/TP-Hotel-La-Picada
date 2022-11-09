@@ -81,6 +81,7 @@ void MenuHabitacion ()
 
         case '5':
         {
+            cls();
             Habitacion h;
             HabitacionArchivo ha;
             int pos=0;
@@ -88,14 +89,14 @@ void MenuHabitacion ()
             for (int i=0; i<pos; i++)
             {
                 h=ha.leer(i);
-                if (h.getDisponible()==false)
-                {
-                    h.Mostrar();
-                    cout<< endl;
-                    cout<< "**"<<endl;
-                }
+
+                h.Mostrar();
+                cout<< endl;
+                cout<< "**"<<endl;
+
             }
         }
+
         break;
 
 
@@ -108,7 +109,7 @@ void MenuHabitacion ()
 
         default:
         {
-           msjerror ();
+            msjerror ();
 
         }
 
@@ -172,7 +173,7 @@ void altaHabitacion ()
 
         default:
         {
-          msjerror ();
+            msjerror ();
         }
 
 
@@ -198,12 +199,14 @@ int consultaHabitacion()
     else
     {
         ha=har.leer(pos);
-        if(ha.getDisponible()==true)
+        if(ha.getActiva()==true)
         {
             ha.Mostrar();
             system("pause");
         }
-        else{cout<<"LA HABITACION SELECCIONADA SE ENCUENTRA DESHABILITADA"<<endl;
+        else
+        {
+            cout<<"LA HABITACION SELECCIONADA SE ENCUENTRA DESHABILITADA"<<endl;
             system("pause");
         }
     }
@@ -226,7 +229,8 @@ void modificarDatosHabitacion()
         system("pause");
     }
     else
-    {   ha=har.leer(pos);
+    {
+        ha=har.leer(pos);
         ha.Cargar(numero);
 
         if (har.modificarArchivo(pos, ha))
@@ -254,21 +258,21 @@ void bajaHabitacion()
     pos=har.buscar(numero);
     if(pos<0)
     {
-        cout<<"EL NUMERO DE DNI CLIENTE NO ESTA REGISTRADO"<<endl;
+        cout<<"EL NUMERO DE HABITACION NO ESTA REGISTRADA"<<endl;
         system("pause");
     }
     else
     {
         ha=har.leer(pos);
         ha.Mostrar();
-        if(ha.getDisponible()==false)
+        if(ha.getActiva()==false)
         {
             cout<<"EL REGISTRO EXISTE PERO YA ESTA DADO DE BAJA"<<endl;
             system("pause");
         }
         else
         {
-            ha.setDisponible(false);
+            ha.setActiva(false);
             if(har.modificarArchivo(pos,ha))
             {
                 cout<< "SE ELIMINO EL REGISTRO CON EXITO"<<endl;

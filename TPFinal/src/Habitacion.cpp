@@ -15,9 +15,9 @@ int Habitacion::getTipoHabitacion()
 {
     return _tipoHabitacion;
 }
-bool Habitacion::getDisponible ()
+bool Habitacion::getActiva ()
 {
-    return _disponible;
+    return _activa;
 }
 void Habitacion::setNumero (int numero)
 {
@@ -32,13 +32,13 @@ void Habitacion::setTipoHabitacion(int tipoHabitacion)
 {
     _tipoHabitacion = tipoHabitacion;
 }
-void Habitacion::setDisponible (bool disponible)
+void Habitacion::setActiva (bool activa)
 {
-    _disponible=disponible;
+    _activa=activa;
 }
 void Habitacion::Cargar(int numero){
     _numero = numero;
-    _disponible=true;
+    _activa=true;
     cout<<"Ingrese tipo de habitacion (1-5): "<<endl;
     cout<<"1-HABITACION SIMPLE STANDARD"<<endl;
     cout<<endl;
@@ -61,7 +61,7 @@ void Habitacion::Mostrar()
     cout<<_numero<<"  "<<"Tipo de habitacion: "<<_tipoHabitacion<<endl;
     cout<<"Precio X noche: "<<_precio<<endl;
     cout<<"Disponible: ";
-    if (_disponible==true)
+    if (_activa==true)
         {cout<< "si"<<endl;}
     else{cout<< "no"<<endl;}
 }
