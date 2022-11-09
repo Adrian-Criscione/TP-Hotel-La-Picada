@@ -4,7 +4,7 @@
 #include <iostream>
 
 using namespace std;
-
+////SIGO MODIFICANDO EL .H////
 class Servicio
 {
 private:
@@ -26,7 +26,16 @@ public:
         void setActivo (bool);
         void Cargar(int codigoservicio);
         void Mostrar();
+<<<<<<< Updated upstream
 
 
+=======
+        ////ESTO SE VA A GUARDAR EN LA RAMA DE PRUEBA/////
+
+<<<<<<< HEAD
+=======
+        ///////ESPERO QUE FUNCIONE!!!
+>>>>>>> 94e5ec1190fed029e08efc126ddf7b737f986f27
+>>>>>>> Stashed changes
 };
 #endif // SERVICIO_H_INCLUDED
