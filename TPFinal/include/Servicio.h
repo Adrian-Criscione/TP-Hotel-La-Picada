@@ -8,9 +8,9 @@ using namespace std;
 class Servicio
 {
 private:
+        int _numeroReserva;
         int _codigoServicio;
-        int _comida;
-        int _excursiones;
+        char _descripcion[30];
         float _precio;
         bool _activo;
 public:

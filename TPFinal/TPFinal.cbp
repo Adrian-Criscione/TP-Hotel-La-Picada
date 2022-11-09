@@ -36,8 +36,6 @@
 		</Compiler>
 		<Unit filename="include/Cliente.h" />
 		<Unit filename="include/ClienteArchivo.h" />
-		<Unit filename="include/Excursiones.h" />
-		<Unit filename="include/ExcursionesArchivo.h" />
 		<Unit filename="include/Fecha.h" />
 		<Unit filename="include/Habitacion.h" />
 		<Unit filename="include/HabitacionArchivo.h" />
@@ -50,8 +48,6 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />
 		<Unit filename="src/ClienteArchivo.cpp" />
-		<Unit filename="src/Excursiones.cpp" />
-		<Unit filename="src/ExcursionesArchivo.cpp" />
 		<Unit filename="src/Fecha.cpp" />
 		<Unit filename="src/Habitacion.cpp" />
 		<Unit filename="src/HabitacionArchivo.cpp" />
