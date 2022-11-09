@@ -16,11 +16,12 @@ private:
 public:
         int getNumeroReserva ();
         int getCodigoServicio ();
+        const char* getDescricion();
         float getPrecio ();
         bool getActivo ();
+        void setNumeroreserva();
         void setCodigoServicio (int);
-        void setComida (int);
-        void setExcursiones (int);
+        void setDescripcion(const char *descripcion);
         void setPrecio (float);
         void setActivo (bool);
         void Cargar(int codigoservicio);
