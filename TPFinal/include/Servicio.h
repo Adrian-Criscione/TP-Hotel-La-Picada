@@ -14,9 +14,8 @@ private:
         float _precio;
         bool _activo;
 public:
+        int getNumeroReserva ();
         int getCodigoServicio ();
-        int getComida ();
-        int getExcursiones ();
         float getPrecio ();
         bool getActivo ();
         void setCodigoServicio (int);
