@@ -133,19 +133,19 @@ void Reserva::Cargar(int numeroreserva, int dni,int hab)
      cout<< "Ingrese el Medio de Pago: "<<endl;
     cout<< "1)Efectivo 2)Tarjeta 3)Mercado Pago "<<endl;
     cin>> _medioDePago;
-   /* cout<<"Ingrese fecha de comienzo reserva: "<<endl;
+    cout<<"Ingrese fecha de comienzo reserva: "<<endl;
     cin>>dia;
     cin>>mes;
     cin>>anio;
-    Fecha(dia,mes,anio);
+    setFechaComienzo(Fecha(dia,mes,anio));
     cout<<endl;
     cout<<"Ingrese fecha de final de reserva: "<<endl;
     cin>>dia;
     cin>>mes;
     cin>>anio;
-    setFechaFin(Fecha(dia,mes,anio));*/
+    setFechaFin(Fecha(dia,mes,anio));
     cout<<endl;
-   /// _diasreserva=getFechaFin().getDia()-getFechaComienzo().getDia();
+   diasreserva=(getFechaFin().getDia()-getFechaComienzo().getDia())-1;
     cout<< "Ingrese Canal de Reserva: "<<endl;
     cout<< "1) Pagina Web 2) Booking 3) Almundo 4) Despegar"<<endl;
     cin>> _canalDeReserva;

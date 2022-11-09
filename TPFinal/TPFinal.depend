@@ -179,14 +179,14 @@
 	"rlutil.h"
 	"ClienteArchivo.h"
 
-1667950883 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
+1667958531 source:c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\src\reserva.cpp
 	<iostream>
 	"Reserva.h"
 	"Servicio.h"
 	"Fecha.h"
 	"rlutil.h"
 
-1667952275 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
+1667954481 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\reserva.h
 	<cstring>
 	<iostream>
 	"Fecha.h"
@@ -195,7 +195,7 @@
 	"Servicio.h"
 	<iostream>
 
-1667802281 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicio.h
+1667958532 c:\users\usuario\desktop\hotel la picada\tp-hotel-la-picada\tpfinal\include\servicio.h
 	<cstring>
 	<iostream>
 
